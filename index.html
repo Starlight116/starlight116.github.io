@@ -4,21 +4,37 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="sidenav.js"></script>
         <title>Portfolio</title>
     </head>
-    <body>
+    <body onresize="screenSize()">
+        
         <header>
             <img src="images/logo.png" alt="Logo"/>
-            <nav> 
-                <label for="toggle"><img src="icons/menu.svg"/></label>
-                <input type="checkbox" id="toggle">
-                <div class="main_pages">
-                    <a href="#">Accueil</a>
-                    <a href="#">Actualité</a>
+            <nav id="normal">
+                <a href="#">A propos</a>
+                <a href="#">Compétences</a>
+                <a href="#">Mes Projets</a>
+                <a href="#">Contact</a>
+                <a class="action" href="#">Télécharger le CV</a>
+            </nav>
+            <nav id="mobile">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#">A propos</a>
+                    <a href="#">Compétences</a>
+                    <a href="#">Mes Projets</a>
                     <a href="#">Contact</a>
+                    <br/>
+                    <p class="line"></p>
+                    <br/>
+                    <a class="action" href="#">Télécharger le CV</a>
                 </div>
+                <span class="open" onclick="openNav()"><img src="icons/menu.svg"/></span>
             </nav>
         </header>
+        
+
         <section class="hero">
             <h2></h2>
             <p></p>
