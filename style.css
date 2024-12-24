@@ -3,32 +3,113 @@ body{
     padding: 0;
     font-family: "Segoe UI";
 }
+/*text sizes*/
+h1{
+    font-size: 54px;
+    font-style: bold;
+    font-weight: 400;
+    line-height: 100%; /* 54px */
+}
+h2{
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 44px */
+}
+h3{
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 36px */
+}
+h4{
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 32px */
+}
+h5{
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 26px */
+}
+h6{
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 22px */
+}
+p{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 18px */
+}
+p .mid{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 14px */
+}
+p .small{
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 12px */
+}
+/*colors*/
+:root{
+    --dark-purple: #4A2D6B;
+    --dark-blue: #302381;
+    --dark-blue-grey: #353A56;
+    --dark-grey: #2D2D2D;
+    --light-grey: #F5F5F5;
+    --light-purple: #D5CFFF;
+    --light-blue: #91A9FF;
+    --light-pink: #ECBFFF;
+    --light-sky: #78D4F5;
+    --purple: #8285F9;
+    --red : #BB1B48;
+    --blue: #2290FC;
+    --pink: #EB58A9;
+    --sky: #A2C7FF;
+    --white: #FFFFFF;
+    --black: #000000;
+    --transp-white:rgba(255, 255, 255, 0.71);
+    --shadow: rgba(0, 0, 0, 0.25);
+}
 header{
-    background: rgba(255, 255, 255, 0.71);
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+    background: var(--transp-white);
+    box-shadow: 0px 5px 10px 0px var(--shadow);
     backdrop-filter: blur(2px);
     display: flex;
-    height: 55px;
+    height: 70px;
     padding: 10px 15px;
     justify-content: space-between;
     align-items: center;
+    font-size: 22px;
+    font-weight: 500;
+}
+header img{
+    height: 60px;
 }
 #normal a{
     text-decoration: none;
-    color: var(--dark-grey, #2D2D2D);
-    background-color: #FFFFFF;
-    height: 55px;
-    padding: 20px 20px;
+    color: var(--dark-grey);
+    background-color: var(--white);
+    height: 70px;
+    padding: 20px 10px;
 }
 #normal a:hover{
-    color: #FFFFFF;
-    background-color: var(--dark-purple, #4A2D6B);
+    color: var(--white);
+    background-color: var(--dark-purple);
 }
 #normal .action{
     padding: 20px 30px;
     border-radius: 60px;
-    background: var(--dark-purple, #4A2D6B);
-    color: #FFFFFF;
+    background: var(--dark-purple);
+    color: var(--white);
     margin: 0 auto;
 }
 .sidenav{
@@ -39,35 +120,31 @@ header{
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     right: 0;
-    background-color: #FFFFFF; 
+    background-color: var(--white); /* White*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 .sidenav a {
-    color: var(--dark-grey, #2D2D2D);
-    /* titles/h5 */
-    font-family: "Segoe UI";
-    font-size: 26px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%; /* 26px */
+    color: var(--dark-grey);
+    background-color:;
     padding: 10px 30px;
     text-decoration: none;
     display: block;
     transition: 0.3s;
+    font-size: 32px;
 }
 .sidenav .line{
     width: 221px;
     height: 1px;
-    background: #353A56;
+    background: var(--dark-grey);
     margin: 0 auto;
     display: block;
     transition: 0.3s;
 }
     /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-    color: #353A56;
+    color: var(--dark-purple);
 }
 
     /* Position and style the close button (top right corner) */
@@ -87,10 +164,11 @@ header{
     gap: 10px;
     align-self: stretch;
     border-radius: 60px;
-    background: var(--dark-purple, #4A2D6B);
-    color: #FFFFFF;
+    background: var(--dark-purple);
+    color: var(--white);
     margin: 0 auto;
     display: block;
     transition: 0.3s;
     margin: 0 15%;
+    text-align: center;
 }

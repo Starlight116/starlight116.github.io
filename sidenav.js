@@ -13,7 +13,7 @@ function openNav() {
 
 function screenSize(){
     // If the screen is less than 800px wide, show the mobile menu
-    if (window.matchMedia("(max-width: 800px)").matches) {
+    if (window.matchMedia("(max-width: 900px)").matches) {
         document.getElementById("mySidenav").style.width = "0";
         document.getElementById("mobile").style.display = "block";
         document.getElementById("normal").style.display = "none";
