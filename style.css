@@ -13,9 +13,17 @@ header{
     justify-content: space-between;
     align-items: center;
 }
+#sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -250px;
+    background-color: #e8e8e8;
+    padding-top: 60px;
+    transition: left 0.5s ease;
+}
 hero{
 
-}
-.sidenav{
-    
 }
