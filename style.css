@@ -29,13 +29,25 @@ label, #toggle
     nav .main_pages 
     {
         display: none;
+        width: 321px;
+        padding-bottom: 10px;
         flex-direction: column;
-        background: #48435C;
-        height: 220px;
+        align-items: center;
+        gap: 50px;
     }
  
     nav .main_pages a {
-        width: 50%;
+        padding: 10px 30px;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        color: var(--dark-grey, #2D2D2D);
+        /* titles/h5 */
+        font-family: "Segoe UI";
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
     }
  
     label 
