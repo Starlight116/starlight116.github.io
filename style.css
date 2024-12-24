@@ -13,9 +13,7 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-label{
-    display: none;
-}
+
 label, #toggle
 {
     display: none;
@@ -43,7 +41,7 @@ label, #toggle
     label 
     {
         width: 30px;
-        display: flex;
+        display:flex;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
