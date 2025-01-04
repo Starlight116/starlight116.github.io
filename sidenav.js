@@ -23,6 +23,10 @@ function screenSize(){
         document.getElementById("mobile").style.display = "none";
         document.getElementById("normal").style.display = "block";
     }
+    // if i change the screen size, the menu will close
+    window.addEventListener("resize", function(){
+        closeNav();
+    });
 }
 window.onload = function() {
     screenSize();
