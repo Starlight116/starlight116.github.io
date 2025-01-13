@@ -11,30 +11,41 @@ function openNav() {
     document.body.style.backdropFilter = "none";
   }
 
-function screenSize(){
-    // If the screen is less than 800px wide, show the mobile menu
-    if (window.matchMedia("(max-width: 900px)").matches) {
-        document.getElementById("mySidenav").style.width = "0";
-        document.querySelectorAll("#mobile").forEach(function(element)
-        {
-            element.style.display = "flex";
-            element.style.flexDirection = "column";
-        });
-        document.querySelectorAll("#desktop").forEach(function(element)
-        {
-            element.style.display = "none";
-        });
+  function reorderContent() {
+    const container = document.querySelector('.hero');
+    const image = document.querySelector('.picture');
+    const text = document.querySelector('.text');
+
+    if (window.innerWidth <= 900) {
+        // Place l'image avant le texte
+        if (container.firstChild !== image) {
+            container.insertBefore(image, text);
+        }
     } else {
-        // If the screen is greater than 800px wide, show the desktop menu
-        document.querySelectorAll("#mobile").forEach(function(element)
-        {
-            element.style.display = "none";
-        });
-        document.querySelectorAll("#desktop").forEach(function(element)
-        {
-            element.style.display = "flex";
-            element.style.flexDirection = "row";
-        });
+        // Place l'image après le texte
+        if (container.firstChild !== text) {
+            container.appendChild(image);
+        }
+    }
+}
+
+function screenSize(){
+    const mobile = document.getElementById("mobile");
+    const desktop = document.getElementById("desktop");
+    const sidenav = document.getElementById("mySidenav");
+    const container = document.querySelector('.hero');
+    reorderContent();
+    // If the screen is less than 900px wide, show the mobile menu
+    if (window.matchMedia("(max-width: 900px)").matches) {
+        sidenav.style.width = "0";
+        mobile.style.display = "block";
+        desktop.style.display = "none";
+        container.style.flexDirection = "column";
+    } else {
+        // If the screen is greater than 900px wide, show the desktop menu
+        mobile.style.display = "none";
+        desktop.style.display = "block";
+        container.style.flexDirection = "row";
     }
     // if i change the screen size, the menu will close
     window.addEventListener("resize", function(){

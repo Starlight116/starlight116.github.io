@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: "Segoe UI";
+    font-family: "Segoe UI", sans-serif;
 }
 
 /*text sizes*/
@@ -61,20 +61,8 @@ p .small{
 }
 /*colors*/
 :root{
-    --dark-purple: #4A2D6B;
-    --dark-blue: #302381;
-    --dark-blue-grey: #353A56;
     --dark-grey: #2D2D2D;
-    --light-grey: #F5F5F5;
-    --light-purple: #D5CFFF;
-    --light-blue: #91A9FF;
-    --light-pink: #ECBFFF;
-    --light-sky: #78D4F5;
-    --purple: #8285F9;
-    --red : #BB1B48;
-    --blue: #2290FC;
-    --pink: #EB58A9;
-    --sky: #A2C7FF;
+    --purple: #888BC0;
     --white: #FFFFFF;
     --black: #000000;
     --transp-white:rgba(255, 255, 255, 0.71);
@@ -84,7 +72,15 @@ header{
     background: var(--transp-white);
     box-shadow: 0px 5px 10px 0px var(--shadow);
     backdrop-filter: blur(2px);
+
     display: flex;
+    flex-direction: row;
+    /*the header is fixed at the top of the page when scrolling*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
     height: 35px;
     padding: 10px;
     justify-content: space-between;
@@ -92,8 +88,10 @@ header{
     font-size: 18px;
     font-weight: 500;
 }
+
 header img{
-    height: 40px;
+    /*logo has to be stuck inside the header and resized automatically*/
+    height: 150%;
 }
 
 #desktop .action{
@@ -107,9 +105,9 @@ header img{
 #desktop a{
     text-decoration: none;
     color: var(--dark-grey);
-    background-color: var(--white);
-    padding: 20px 30px;
     height: fit-content;
+    align-self: center;
+    padding: 15px;
 }
 #desktop a:hover{
     background: var(--purple);
@@ -179,7 +177,17 @@ header img{
     text-align: center;
 }
 
-section {
+.hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 45px 40px;
+    justify-content: space-between;
+    text-align: left;
+    gap: 25px;
+}
+.about{
+    background: #D9D9D9;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -188,15 +196,20 @@ section {
     text-align: left;
     gap: 25px;
 }
-
-#mobile .picture{
-    min-width: 215px;
-    min-height: 215px;
-    background: #D9D9D9;
-    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25);
-    margin: 20px 20px;
+.contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
-#desktop .picture{
+
+.links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.picture{
     min-width: 350px;
     min-height: 350px;
     background: #D9D9D9;
@@ -209,3 +222,44 @@ section {
     flex-direction: column;
     text-align: left;
 }
+
+.contain {
+    color: #3c3c3c;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+
+.heartbeat {
+    position: absolute;
+    width: fit-content;
+    background-color: #7932f6;
+    border-radius: 40px;
+    width: 10px;
+    height: 10px;
+    opacity: 0.75;
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.dot {
+    position: relative;
+    width: fit-content;
+    background: linear-gradient(135deg, #7932f6, #805ad5 48%, #342662);
+    border-radius: 40px;
+    width: 10px;
+    height: 10px;
+}
+
+@keyframes ping {
+    75%,
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.marginP{
+    margin: 0 10px;
+}
+
