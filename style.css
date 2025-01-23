@@ -2,8 +2,8 @@ body{
     margin: 0;
     padding: 0;
     font-family: "Segoe UI", sans-serif;
+    background-image: url('images/back.jpg');
 }
-
 /*text sizes*/
 h1{
     font-size: 54px;
@@ -68,6 +68,12 @@ p .small{
     --transp-white:rgba(255, 255, 255, 0.71);
     --shadow: rgba(0, 0, 0, 0.25);
 }
+.overlay{
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+}
 header{
     background: var(--transp-white);
     box-shadow: 0px 5px 10px 0px var(--shadow);
@@ -79,7 +85,7 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index:2;
 
     height: 35px;
     padding: 10px;
@@ -92,11 +98,19 @@ header{
 header img{
     /*logo has to be stuck inside the header and resized automatically*/
     height: 150%;
+    margin-left: 45px;
 }
 
 #desktop .action{
     padding: 10px 20px;
     margin: 16px;
+    border-radius: 60px;
+    background: var(--purple);
+    color: var(--white);
+}
+
+.action{
+    padding: 10px 20px;
     border-radius: 60px;
     background: var(--purple);
     color: var(--white);
@@ -109,17 +123,23 @@ header img{
     align-self: center;
     padding: 15px;
 }
+
 #desktop a:hover{
     background: var(--purple);
     color: var(--white);
 }
-
+#desktop{
+    margin-right: 45px;
+}
+.open{
+    margin-right: 45px;
+}
 .sidenav{
     display: block;
     height: 100vh; /*Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    z-index: 4; /* Stay on top */
     top: 0; /* Stay at the top */
     right: 0; /* open on right side */
     background-color: var(--white);
@@ -129,7 +149,6 @@ header img{
 }
 .sidenav a {
     color: var(--dark-grey);
-    background-color:;
     padding: 10px 30px;
     text-decoration: none;
     display: block;
@@ -181,17 +200,45 @@ header img{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 45px 40px;
     justify-content: space-between;
     text-align: left;
     gap: 25px;
+    background-color: #FFFFFF;
 }
 .about{
     background: #D9D9D9;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 45px 40px;
+    justify-content: space-between;
+    text-align: left;
+    gap: 25px;
+}
+.skills{
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    gap: 25px;
+}
+
+.projects{
+    background: #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    gap: 25px;
+}
+
+.contact{
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     text-align: left;
     gap: 25px;
@@ -263,3 +310,65 @@ header img{
     margin: 0 10px;
 }
 
+.hero, .about, .skills, .projects, .contact{
+    position: relative; /* Position relative pour leur donner un contexte */
+    z-index: 1; /* S'assure qu'ils apparaissent au-dessus de #starshine */
+    margin : 0 10%;
+    padding: 45px 40px;
+}
+
+#starshine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1000%;
+    z-index: -2;
+    pointer-events: none;
+}    
+.shine {
+    display: block;
+    position: absolute;
+    background-image: url('images/sparkle.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    overflow: hidden;
+    z-index: -1;
+    color: transparent;
+    -moz-opacity: 0.0;
+    opacity: 0.0;
+    animation: glitter 4s linear 0s infinite normal;
+}
+.shine.small {
+    width: 20px;
+    height: 20px;
+}
+.shine.medium {
+    width: 30px;
+    height: 30px;
+}
+.shine.large {
+    width: 50px;
+    height: 50px;
+}
+  
+/*CSS3 keyframes for glittering effect*/
+@-webkit-keyframes glitter {
+    0% {
+        -webkit-transform: scale(0.3) rotate(0deg);
+        opacity: 0;
+    }
+    25% {
+        -webkit-transform: scale(1) rotate(360deg);
+        opacity: 1;
+    }
+    50% {
+        -webkit-transform: scale(0.3) rotate(720deg);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(0.3) rotate(0deg);
+        opacity: 0;
+    }
+}

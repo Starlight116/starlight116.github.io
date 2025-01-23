@@ -1,17 +1,17 @@
 function openNav() {
     document.getElementById("mySidenav").style.width = "80%";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.71)";
-    document.body.style.backdropFilter = "blur(2px)";
-  }
-  
-  /* Close/hide the sidenav */
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.body.style.backgroundColor = "white";
-    document.body.style.backdropFilter = "none";
-  }
+    document.querySelector('overlay').style.backgroundColor = "rgba(0,0,0,0.71)";
+    document.querySelector('overlay').style.backdropFilter = "blur(2px)";
+}
 
-  function reorderContent() {
+  /* Close/hide the sidenav */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.querySelector('overlay').style.backgroundColor = "rgba(0,0,0,0)";
+    document.querySelector('overlay').style.backdropFilter = "none";
+}
+
+function reorderContent() {
     const container = document.querySelector('.hero');
     const image = document.querySelector('.picture');
     const text = document.querySelector('.text');
