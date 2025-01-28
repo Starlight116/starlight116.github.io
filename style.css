@@ -1,3 +1,20 @@
+/*colors*/
+:root{
+    --dark-grey: #363C54;
+    --purple: #6F67CC;
+    --pink: #ECCDD4;
+    --lightblue:#97A5EC;
+    --blue:#424592;
+    --hotPink:#F57AAC;
+    --yellow: #EADEA0;
+    --darkPink:#472B30;
+    --darkBlue:#2A314A;
+    --white: #FFFFFF;
+    --black: #000000;
+    --transp-white:rgba(255, 255, 255, 0.71);
+    --shadow: rgba(0, 0, 0, 0.25);
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -6,39 +23,28 @@ body{
 }
 /*text sizes*/
 h1{
-    font-size: 54px;
+    font-size: 42px;
     font-style: bold;
     font-weight: 400;
-    line-height: 100%; /* 54px */
+    line-height: 100%; 
+    
 }
 h2{
-    font-size: 44px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%; /* 44px */
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 100%; 
+    color:var(--darkPink);
+    padding-bottom: 5%;
+
 }
 h3{
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 400;
+    font-size: 22px;
+    font-weight: bold;
     line-height: 100%; /* 36px */
 }
 h4{
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%; /* 32px */
-}
-h5{
-    font-size: 26px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%; /* 26px */
-}
-h6{
     font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
+    font-weight: bold;
     line-height: 100%; /* 22px */
 }
 p{
@@ -47,36 +53,19 @@ p{
     font-weight: 400;
     line-height: 100%; /* 18px */
 }
-p .mid{
+.mid{
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%; /* 14px */
 }
-p .small{
+.small{
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%; /* 12px */
 }
-/*colors*/
-:root{
-    --dark-grey: #363C54;
-    --purple: #6F67CC;
-    --pink: #E398AD;
-    --lightblue:#97A5EC;
-    --blue:#424592;
-    --white: #FFFFFF;
-    --black: #000000;
-    --transp-white:rgba(255, 255, 255, 0.71);
-    --shadow: rgba(0, 0, 0, 0.25);
-}
-.overlay{
-    z-index: 3;
-    width: 100%;
-    height: 100%;
-    background-color: #FFFFFF;
-}
+
 header{
     background: var(--transp-white);
     box-shadow: 0px 5px 10px 0px var(--shadow);
@@ -100,7 +89,7 @@ header{
 
 header img{
     /*logo has to be stuck inside the header and resized automatically*/
-    height: 170%;
+    height: 180%;
     margin-left: 45px;
 }
 
@@ -206,17 +195,18 @@ header img{
     justify-content: space-between;
     text-align: left;
     gap: 25px;
-    background-color: var(--white);
-}
+    background-color: var(--white);}
+
 .skills,.contact {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: left;
-    gap: 25px;
+    gap: 15px;
     background-color: var(--white);
 }
+
 .about, .projects{
     background: var(--pink);
     display: flex;
@@ -224,17 +214,27 @@ header img{
     align-items: center;
     justify-content: space-between;
     text-align: left;
-    gap: 25px;
+    gap: 15px;
 }
-.comp{
+
+.comp, .values{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content:space-around;
     gap: 50px;
+    margin-top : 5%;
 }
-.contacts{
+
+.hero, .about, .skills, .projects, .contact, footer{
+    position: relative; /* Position relative pour leur donner un contexte */
+    z-index: 1; /* S'assure qu'ils apparaissent au-dessus de #starshine */
+    padding: 5% 10%;
+    margin: 0 10%; 
+}
+
+.infos{
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -248,8 +248,8 @@ header img{
 }
 
 .picture{
-    max-width: 350px;
-    max-height: 350px;
+    max-width: 320px;
+    max-height: 320px;
 }
 
 .text{
@@ -257,15 +257,28 @@ header img{
     flex-direction: column;
     text-align: left;
 }
+.text h2{
+    margin: 0;
+}
 
-.contain {
-    color: #3c3c3c;
+.container {
+    color: var(--dark-grey);
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 100%;
 }
 
+.contain{
+    display: flex;
+    flex-direction: row;
+
+}
+.projects a>img{
+    max-width: 20px;
+    max-height: 20px;
+    margin: 0 10px;
+}
 .heartbeat {
     position: absolute;
     width: fit-content;
@@ -280,7 +293,7 @@ header img{
 .dot {
     position: relative;
     width: fit-content;
-    background: linear-gradient(135deg, #7932f6, #805ad5 48%, #342662);
+    background: linear-gradient(135deg, var(--purple), var(--blue) 48%, var(--dark-grey));
     border-radius: 40px;
     width: 10px;
     height: 10px;
@@ -296,13 +309,6 @@ header img{
 
 .marginP{
     margin: 0 10px;
-}
-
-.hero, .about, .skills, .projects, .contact{
-    position: relative; /* Position relative pour leur donner un contexte */
-    z-index: 1; /* S'assure qu'ils apparaissent au-dessus de #starshine */
-    margin : 0 10%;
-    padding: 45px 40px;
 }
 
 #starshine {
@@ -360,6 +366,78 @@ header img{
         opacity: 0;
     }
 }
+.cartouche {
+    border-radius: 60px;
+    background: var(--blue);
+    color: var(--yellow);
+    padding: 15px 30px;
+    margin: 0 10px;
+
+}
+.value, .skill{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.skill img{
+    max-width: 64px;
+    max-height: 64px;
+    margin: 0 10px;
+}
+.value img{
+    max-width: 100px;
+    max-height: 100px;
+    margin : 0 10px;
+}
+
+.cardLeft, .cardRight{
+    display: flex;
+    flex-direction: row;
+    padding: 20px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border-radius: 20px;
+    margin: 5px 0;
+    background: var(--white);
+    box-shadow: -4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    flex-wrap: wrap;
+}
+.insideCardLeft{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    align-content: flex-end;
+}
+.tags{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    flex-wrap: wrap;
+    align-self: flex-end;
+}
+.tag{
+    border-radius: 10px;
+    padding: 5px 10px;
+    background: var(--lightblue);
+    color: var(--darkBlue);
+}
+.cardImage{
+    max-width: 300px;
+    max-height: 200px;
+    background-color: #d4d4d4;
+}
+
+.imageCute{
+    max-width: 50px;
+    max-height: 50px;
+    margin: 0px;
+    position: sticky;
+}
 footer{
-    background-color: var(--white);
+    background-color: var(--pink);
+    text-align: center;
+    font-weight: bold;
 }

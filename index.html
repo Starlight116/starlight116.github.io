@@ -11,6 +11,12 @@
     </head>
 
     <body onresize="screenSize()">
+        <div id="starshine">
+            <div class="template shine">
+            </div>
+        </div>
+        <script src="test.js"></script>
+
         <header>
             <img src="images/logo.png" alt="Logo"/>
             <nav id="desktop">
@@ -37,23 +43,19 @@
             </nav>
             
         </header>
-        <div id="starshine">
-            <div class="template shine">
-            </div>
-        </div>
-        <script src="test.js"></script>
+        
+        <div class="content">
             <section class="hero">
-                
                 <img class="picture" src="images/photo.png" alt="Photo de Camille"/>
                 <div class="text">
                     <h2>Bonjour, je suis Camille !</h2>
                     <p>
                         Developpeuse Front-End, Webdesigner et UX Designer en formation, je cherche à créer des expériences visuelles efficaces, 
                         accessibles et immersives. 
-                        Je développe aussi des jeux d'horreur sur mon temps libre.
+                        <br/>Je développe aussi des jeux d'horreur sur mon temps libre.
                     </p>
                     
-                    <div class="contacts">
+                    <div class="infos">
                         <div class="contain">
                             <img src="icons/position.svg"/><p class="marginP">Paris</p>
                         </div>
@@ -63,7 +65,7 @@
                             <div class="contain"><a href="https://www.linkedin.com/in/camille-protat/"><img src="icons/LinkedinLogo.svg"/></a></div> 
                             <div class="contain"><a href="https://www.artstation.com/redstarlight"><img src="icons/art.svg"/></a></div>
                         </div>
-                        <div class="contain">
+                        <div class="container">
                             <span class="heartbeat"></span>
                             <span class="dot"></span>
                             <p class="marginP">Disponible pour travailler</p>
@@ -73,148 +75,159 @@
             </section>
             <section class="about">
                 <h3 class="cartouche">A propos</h3>
-                <p>
+                <p class="aboutText">
                     Mon parcours atypique m'a permis de développer des compétences uniques, alliant technique et créativité. 
                     J'ai d'abord voulu m'orienter en art, en faisant du concept art et du charadesign.
-                    Après 2 ans, une réorientation imprévue m’a amenée a faire une licence en informatique, 
+                    <br/>Après 2 ans, une réorientation imprévue m’a amenée a faire une licence en informatique, 
                     consolidant ainsi mes bases techniques aquises depuis le lycée. 
-                    Désormais en Master de design UI/UX, je me spécialise dans l’accessibilité et l’inclusivité, 
+
+                    <br/><br/>Désormais en Master de design UI/UX, je me spécialise dans l’accessibilité et l’inclusivité, 
                     des thèmes que je souhaite explorer en profondeur dans mon mémoire et que je considère essentiels pour l’avenir du design.
                     
-                    Animée par une passion pour l’art, l’horreur par les films et les jeux et la culture numérique, 
+                    <br/><br/>Animée par une passion pour l’art, l’horreur par les films et les jeux et la culture numérique, 
                     je puise dans ces inspirations pour enrichir mes projets personnels. 
-                    J'essaye de participer régulièrement à des gamejams ou des challenges créatifs 
+                    <br/>J'essaye de participer régulièrement à des gamejams ou des challenges créatifs 
                     pour m'améliorer, je cherche toujours à apprendre des choses auprès de mes collègues.
                     
-                    Je souhaite mettre à profit mes compétences artistiques et techniques pour concevoir des interfaces 
+                    <br/><br/>Je souhaite mettre à profit mes compétences artistiques et techniques pour concevoir des interfaces 
                     à la fois fonctionnelles et immersives, et créer des expériences visuelles qui suscitent des émotions.
-                </p>
+                </p> 
+                    <h3 class="cartouche">Mes valeurs</h3>
                     <div class="values">
-                        <h4 class="cartouche">Mes valeurs</h4>
+                    
+                        <div class="value">
+                            <img src="images/créa.png"/>
+                            <p>Créativité</p>
+                        </div>
+                        <div class="value">
+                            <img src="images/fiable.png"/>
+                            <p>Fiabilité</p>
+                        </div>
+                        <div class="value">
+                            <img src="images/curio.png"/>
+                            <p>Curiosité</p>
+                        </div>
+                        <div class="value">
+                            <img src="images/inclus.png"/>
+                            <p>Inclusivité</p>
+                        </div>
+                        <div class="value">
+                            <img src="images/auto.png"/>
+                            <p>Autonomie</p>
+                        </div>
                     </div>
             </section>
             <section class="skills">
-                <h3 class=cartouches>Compétences</h3>
+                <h3 class=cartouche>Compétences</h3>
                 <div class="comp">
                     <div class="skill">
-                        <img src="icons/HTML5.svg" alt="HTML5"/>
-                        <p>HTML5</p>
-                    </div>
-                    <div class="skill">
-                        <img src="icons/CSS3.svg" alt="CSS3"/>
-                        <p>CSS3</p>
-                    </div>
-                    <div class="skill">
-                        <img src="icons/JS.svg" alt="Javascript"/>
-                        <p>Javascript</p>
-                    </div>
-                    <div class="skill">
-                        <img src="icons/Photoshop.svg" alt="Photoshop"/>
+                        <img src="icons/photoshop.png" alt="Photoshop"/>
                         <p>Photoshop</p>
                     </div>
                     <div class="skill">
-                        <img src="icons/Illustrator.svg" alt="Illustrator"/>
+                        <img src="icons/illustrator.png" alt="Illustrator"/>
                         <p>Illustrator</p>
+                    </div>
+                    <div class="skill">
+                        <img src="icons/csp.png" alt="CSP"/>
+                        <p>Clip Studio</p>
                     </div>
                     <div class="skill">
                         <img src="icons/blender.png" alt="Blender"/>
                         <p>Blender</p>
                     </div>
+                    <div class="skill">
+                        <img src="icons/unity.png" alt="Unity"/>
+                        <p>Unity</p>
+                    </div>
+                    <div class="skill">
+                        <img src="icons/figma.png" alt="Figma"/>
+                        <p>Figma</p>
+                    </div>
+                    <div class="skill">
+                        <img src="icons/html.png" alt="HTML5"/>
+                        <p>HTML5</p>
+                    </div>
+                    <div class="skill">
+                        <img src="icons/css.png" alt="CSS3"/>
+                        <p>CSS3</p>
+                    </div>
+                    <div class="skill">
+                        <img src="icons/js.png" alt="Javascript"/>
+                        <p>Javascript</p>
+                    </div>
+                    <div class="skill">
+                        <img src="icons/php.png" alt="PHP"/>
+                        <p>PHP</p>
+                    </div>
+                    <div class="skill">
+                        <img src="icons/sql.png" alt="SQL"/>
+                        <p>SQL</p>
+                    </div>
+                    <div class="skill">
+                        <img src="icons/java.png" alt="Java"/>
+                        <p>Java</p>
+                    </div>
+                    <div class="skill">
+                        <img src="icons/git.png" alt="Git"/>
+                        <p>Git</p>
+                    </div>
+                    
                 </div>
                 
             </section>        
             <section class="projects">
-                <h3 class="cartouche">Mes Projets</h3>
+                <h2><img class="imageCute" src="images/anneau.png"/>Quelques projets sur lesquels j'ai travaillé <img class="imageCute" src="images/stars.png"/></h2>
+
                 <div class="cardLeft">
-                    <div class="insideCard">
+                    <div class="insideCardLeft">
                         <h4>Projet 1</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        <a href="#">Voir le projet</a>
+                        
                         <div class="tags">
-                            <p class="cartouche">AAA</p>
-                            <p class="cartouche">BBB</p>
-                            <p class="cartouche">CCC</p>
-                            <p class="cartouche">DDD</p>
+                            <p class="tag">AAA</p>
+                            <p class="tag">BBB</p>
+                            <p class="tag">CCC</p>
+                            <p class="tag">DDD</p>
                         </div>
+
+                        <a href="#"><img src="icons/link.svg"></a>
                     </div>
-                    
-                    <img src="#" alt="Image du projet"/>
+                    <img class="cardImage" src="#" alt="Image du projet"/>
                 </div>
+
                 <div class="cardRight">
-                    <img src="#" alt="Image du projet"/>
-                    <div class="insideCard">
-                        <h4>Projet 2</h4>
+                    <img class="cardImage" src="#" alt="Image du projet"/>
+                    <div class="insideCardRight">
+                        <h4>Projet 2</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        <a href="#">Voir le projet</a>
+                        
                         <div class="tags">
-                            <p class="cartouche">AAA</p>
-                            <p class="cartouche">BBB</p>
+                            <p class="tag">AAA</p>
+                            <p class="tag">BBB</p>
                         </div>
+
+                        <a href="#"><img src="icons/link.svg"></a>
                     </div>
                 </div>
-                <div class="cardLeft">
-                    <div class="insideCard">
-                        <h4>Projet 1</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        <a href="#">Voir le projet</a>
-                        <div class="tags">
-                            <p class="cartouche">AAA</p>
-                            <p class="cartouche">BBB</p>
-                            <p class="cartouche">CCC</p>
-                            <p class="cartouche">DDD</p>
-                        </div>
-                    </div>
-                    
-                    <img src="#" alt="Image du projet"/>
-                </div>
-                <div class="cardRight">
-                    <img src="#" alt="Image du projet"/>
-                    <div class="insideCard">
-                        <h4>Projet 2</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        <a href="#">Voir le projet</a>
-                        <div class="tags">
-                            <p class="cartouche">AAA</p>
-                            <p class="cartouche">BBB</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cardLeft">
-                    <div class="insideCard">
-                        <h4>Projet 1</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        <a href="#">Voir le projet</a>
-                        <div class="tags">
-                            <p class="cartouche">AAA</p>
-                            <p class="cartouche">BBB</p>
-                            <p class="cartouche">CCC</p>
-                            <p class="cartouche">DDD</p>
-                        </div>
-                    </div>
-                    
-                    <img src="#" alt="Image du projet"/>
-                </div>
-                <div class="cardRight">
-                    <img src="#" alt="Image du projet"/>
-                    <div class="insideCard">
-                        <h4>Projet 2</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        <a href="#">Voir le projet</a>
-                        <div class="tags">
-                            <p class="cartouche">AAA</p>
-                            <p class="cartouche">BBB</p>
-                        </div>
-                    </div>
-                </div>
+                
             </section>
             <section class="contact">
                 <h3 class="cartouche">Contactez moi !</h3>
-                <a href="mailto:protat.camille@gmail.com" class="action">Par mail</a>
-                <a href="tel:+33783668393" class="action">Par téléphone</a>
-                <a href="#" class="action">Sur Linkedin</a>
+                <p>Vous avez un projet en tête ? Vous souhaitez en savoir plus sur mon parcours ? 
+                    <br/>N'hésitez pas à me contacter, je serais ravie d'échanger avec vous !</p>
+                <div class="links">
+                    <a href="mailto:protat.camille@gmail.com" class="action">Par mail</a>
+                    <a href="tel:+33783668393" class="action">Par téléphone</a>
+                    <a href="#" class="action">Sur Linkedin</a>
+                </div>
+                
             </section>
+        </div>
+            
         <footer>
             <p>© 2025 Camille Protat - Tous droits réservés</p>
+            <p>Icones par <a href="https://icones8.fr/icons">Icon8</a></p>
         </footer>
     </body>
 </html>
