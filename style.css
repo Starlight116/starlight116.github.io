@@ -27,6 +27,7 @@ h1{
     font-style: bold;
     font-weight: 400;
     line-height: 100%; 
+    font-family: "Syne Tactile", sans-serif;
     
 }
 h2{
@@ -35,23 +36,27 @@ h2{
     line-height: 100%; 
     color:var(--darkPink);
     padding-bottom: 5%;
+    font-family: "Syne Tactile", sans-serif;
 
 }
 h3{
-    font-size: 22px;
+    font-size: 28px;
     font-weight: bold;
     line-height: 100%; /* 36px */
+    font-family: "Syne Tactile", sans-serif;
 }
 h4{
     font-size: 22px;
     font-weight: bold;
     line-height: 100%; /* 22px */
+    font-family: "Syne Tactile", sans-serif;
 }
 p{
-    font-size: 18px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%; /* 18px */
+    font-family: 'IBM Plex Mono';
 }
 .mid{
     font-size: 14px;
@@ -79,7 +84,7 @@ header{
     width: 100%;
     z-index:2;
 
-    height: 35px;
+    height: 5%;
     padding: 10px;
     justify-content: space-between;
     align-items: center;
@@ -89,7 +94,7 @@ header{
 
 header img{
     /*logo has to be stuck inside the header and resized automatically*/
-    height: 180%;
+    height: 150%;
     margin-left: 45px;
 }
 
@@ -220,9 +225,9 @@ header img{
 .comp, .values{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content:space-around;
+    flex-wrap: wrap;
+    justify-content: space-around;
     gap: 50px;
     margin-top : 5%;
 }
@@ -248,8 +253,11 @@ header img{
 }
 
 .picture{
-    max-width: 320px;
-    max-height: 320px;
+    max-width: 500px;
+    max-height: 500px;
+    /*la taille doit réduire si l'écran est plus petit*/
+    width: 100%;
+    height: auto;
 }
 
 .text{
@@ -379,6 +387,7 @@ header img{
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    
 }
 .skill img{
     max-width: 64px;
