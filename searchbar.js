@@ -36,14 +36,14 @@ function displayData(dataToDisplay) {
 
             if (dataToDisplay.indexOf(item) % 2 === 0) {
                 insideCard.appendChild(image);
-                insideCard.appendChild(title);
-            } else {
-                insideCard.appendChild(title);
-                insideCard.appendChild(image);
             }
+            insideCard.appendChild(title);
             insideCard.appendChild(description);
             insideCard.appendChild(tagsContainer);
             insideCard.appendChild(lien);
+            if (dataToDisplay.indexOf(item) % 2 !== 0) {
+                insideCard.appendChild(image);
+            }
             resultsContainer.appendChild(card);
         });
     } else {
