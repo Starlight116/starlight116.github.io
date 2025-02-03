@@ -455,7 +455,7 @@ header img{
     text-align: right;
     align-content: flex-end;
     gap: 5px;
-    width: 50%;
+    width: 60%;
 }
 .insideCardRight{
     display: flex;
@@ -464,7 +464,7 @@ header img{
     text-align: left;
     align-content: flex-start;
     gap: 5px;
-    width: 50%;
+    width: 60%;
 }
 
 .tags{
@@ -485,9 +485,11 @@ header img{
     color: var(--darkBlue);
 }
 .cardImage{
+    width: 40%;
     max-width: 300px;
     max-height: 200px;
     background-color: #d4d4d4;
+    
 }
 
 .imageCute{
