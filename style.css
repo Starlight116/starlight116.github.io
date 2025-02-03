@@ -472,7 +472,7 @@ header img{
     gap: 5px;
     flex-wrap: wrap;
     justify-content: center;
-    align-items:inherit;
+    align-self:inherit;
 }
 .tag{
     margin: 0;
