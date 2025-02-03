@@ -10,67 +10,40 @@ function displayData(dataToDisplay) {
     if (dataToDisplay.length > 0) {
         dataToDisplay.forEach(item => {
             const card = document.createElement('div');
-            if (dataToDisplay.length % 2 == 0) {
-                card.className = 'cardLeft';
-                const insideCard = document.createElement('div');
-                insideCard.className = 'insideCardLeft';
-                card.appendChild(insideCard);
-                const title = document.createElement('h4');
-                title.textContent = item.nom;
-                insideCard.appendChild(title);
-                const description = document.createElement('p');
-                description.textContent = item.description;
-                insideCard.appendChild(description);
-                const tagsContainer = document.createElement('div');
-                tagsContainer.className = 'tags';
-                item.tags.forEach(tag => {
-                    const tagElement = document.createElement('p');
-                    tagElement.textContent = tag;
-                    tagElement.className = 'tag';
-                    tagsContainer.appendChild(tagElement);
-                });
-                insideCard.appendChild(tagsContainer);
-                const lien = document.createElement('a');
-                lien.href = item.lien;
-                const lienImg = document.createElement('img');
-                lienImg.src = "icons/link.svg";
-                lien.appendChild(lienImg);
-                insideCard.appendChild(lien);
-                const image = document.createElement('img');
-                image.src = item.image;
-                insideCard.appendChild(image);
+            card.className = dataToDisplay.indexOf(item) % 2 === 0 ? 'cardRight' : 'cardLeft';
+            const insideCard = document.createElement('div');
+            insideCard.className = dataToDisplay.indexOf(item) % 2 === 0 ? 'insideCardRight' : 'insideCardLeft';
+            card.appendChild(insideCard);
+            const image = document.createElement('img');
+            image.src = item.image;
+            const title = document.createElement('h4');
+            title.textContent = item.nom;
+            const description = document.createElement('p');
+            description.textContent = item.description;
+            const tagsContainer = document.createElement('div');
+            tagsContainer.className = 'tags';
+            item.tags.forEach(tag => {
+                const tagElement = document.createElement('p');
+                tagElement.textContent = tag;
+                tagElement.className = 'tag';
+                tagsContainer.appendChild(tagElement);
+            });
+            const lien = document.createElement('a');
+            lien.href = item.lien;
+            const lienImg = document.createElement('img');
+            lienImg.src = "icons/link.svg";
+            lien.appendChild(lienImg);
 
-            } else {
-                card.className = 'cardRight';
-                const insideCard = document.createElement('div');
-                insideCard.className = 'insideCardRight';
-                card.appendChild(insideCard);
-                const image = document.createElement('img');
-                image.src = item.image;
+            if (dataToDisplay.indexOf(item) % 2 === 0) {
                 insideCard.appendChild(image);
-                const title = document.createElement('h4');
-                title.textContent = item.nom;
                 insideCard.appendChild(title);
-                const description = document.createElement('p');
-                description.textContent = item.description;
-                insideCard.appendChild(description);
-                const tagsContainer = document.createElement('div');
-                tagsContainer.className = 'tags';
-                item.tags.forEach(tag => {
-                    const tagElement = document.createElement('p');
-                    tagElement.textContent = tag;
-                    tagElement.className = 'tag';
-                    tagsContainer.appendChild(tagElement);
-                });
-                insideCard.appendChild(tagsContainer);
-                const lien = document.createElement('a');
-                lien.href = item.lien;
-                const lienImg = document.createElement('img');
-                lienImg.src = "icons/link.svg";
-                lien.appendChild(lienImg);
-                insideCard.appendChild(lien);
-                insideCard.appendChild(lien);
+            } else {
+                insideCard.appendChild(title);
+                insideCard.appendChild(image);
             }
+            insideCard.appendChild(description);
+            insideCard.appendChild(tagsContainer);
+            insideCard.appendChild(lien);
             resultsContainer.appendChild(card);
         });
     } else {
