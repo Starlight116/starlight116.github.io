@@ -35,7 +35,7 @@ function displayData(dataToDisplay) {
             lien.appendChild(lienImg);
 
             if (dataToDisplay.indexOf(item) % 2 === 0) {
-                insideCard.appendChild(image);
+                card.appendChild(image);
             }
             insideCard.appendChild(title);
             insideCard.appendChild(description);
@@ -44,6 +44,8 @@ function displayData(dataToDisplay) {
             if (dataToDisplay.indexOf(item) % 2 !== 0) {
                 insideCard.appendChild(image);
             }
+            card.appendChild(insideCard);
+            card.appendChild(card);
             resultsContainer.appendChild(card);
         });
     } else {
