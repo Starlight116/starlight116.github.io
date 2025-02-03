@@ -466,13 +466,15 @@ header img{
     gap: 5px;
     width: 50%;
 }
+
 .tags{
     display: flex;
     flex-direction: row;
     gap: 5px;
     flex-wrap: wrap;
-    justify-content: center;
-    align-self:inherit;
+}
+.insideCardLeft .tags{
+    justify-content: flex-end;
 }
 .tag{
     margin: 0;
