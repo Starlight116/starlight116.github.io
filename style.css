@@ -471,6 +471,8 @@ header img{
     flex-direction: row;
     gap: 5px;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items:inherit;
 }
 .tag{
     margin: 0;
