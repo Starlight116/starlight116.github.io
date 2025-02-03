@@ -15,6 +15,7 @@ function displayData(dataToDisplay) {
             insideCard.className = dataToDisplay.indexOf(item) % 2 === 0 ? 'insideCardRight' : 'insideCardLeft';
             const image = document.createElement('img');
             image.src = item.image;
+            image.className = 'cardImage';
             const title = document.createElement('h4');
             title.textContent = item.nom;
             const description = document.createElement('p');
