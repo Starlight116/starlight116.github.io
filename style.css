@@ -472,6 +472,7 @@ header img{
     flex-direction: row;
     gap: 5px;
     flex-wrap: wrap;
+    margin-bottom: 5px;
 }
 .insideCardLeft .tags{
     justify-content: flex-end;
