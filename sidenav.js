@@ -1,14 +1,10 @@
 function openNav() {
     document.getElementById("mySidenav").style.width = "80%";
-    document.querySelector('overlay').style.backgroundColor = "rgba(0,0,0,0.71)";
-    document.querySelector('overlay').style.backdropFilter = "blur(2px)";
 }
 
   /* Close/hide the sidenav */
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-    document.querySelector('overlay').style.backgroundColor = "rgba(0,0,0,0)";
-    document.querySelector('overlay').style.backdropFilter = "none";
 }
 
 function reorderContent() {
