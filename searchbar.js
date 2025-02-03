@@ -13,7 +13,6 @@ function displayData(dataToDisplay) {
             card.className = dataToDisplay.indexOf(item) % 2 === 0 ? 'cardRight' : 'cardLeft';
             const insideCard = document.createElement('div');
             insideCard.className = dataToDisplay.indexOf(item) % 2 === 0 ? 'insideCardRight' : 'insideCardLeft';
-            card.appendChild(insideCard);
             const image = document.createElement('img');
             image.src = item.image;
             const title = document.createElement('h4');
