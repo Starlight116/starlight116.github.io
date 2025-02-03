@@ -59,7 +59,7 @@ function displayData(dataToDisplay) {
                 item.tags.forEach(tag => {
                     const tagElement = document.createElement('p');
                     tagElement.textContent = tag;
-                    tagsContainer.className = 'tag';
+                    tagElement.className = 'tag';
                     tagsContainer.appendChild(tagElement);
                 });
                 insideCard.appendChild(tagsContainer);
