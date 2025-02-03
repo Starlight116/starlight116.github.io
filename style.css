@@ -454,7 +454,7 @@ header img{
     align-items: flex-end;
     text-align: right;
     align-content: flex-end;
-    gap: 10px;
+    gap: 5px;
     width: 50%;
 }
 .insideCardRight{
@@ -463,13 +463,13 @@ header img{
     align-items: flex-start;
     text-align: left;
     align-content: flex-start;
-    gap: 10px;
+    gap: 5px;
     width: 50%;
 }
 .tags{
     display: flex;
     flex-direction: row;
-    gap: 5px 3px;
+    gap: 5px;
     flex-wrap: wrap;
 }
 .tag{
