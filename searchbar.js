@@ -40,11 +40,12 @@ function displayData(dataToDisplay) {
             insideCard.appendChild(description);
             insideCard.appendChild(tagsContainer);
             insideCard.appendChild(lien);
-            if (dataToDisplay.indexOf(item) % 2 !== 0) {
-                insideCard.appendChild(image);
-            }
+            
             card.appendChild(insideCard);
-            card.appendChild(card);
+            if (dataToDisplay.indexOf(item) % 2 !== 0) {
+                card.appendChild(image);
+            }
+            
             resultsContainer.appendChild(card);
         });
     } else {
