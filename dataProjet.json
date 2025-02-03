@@ -1,14 +1,50 @@
 [
-    {"nom":"Projet 1",
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    {"nom":"Draw a Dream",
+    "description":"Une appli de dessin pour apprendre le surréalisme aux enfants",
     "image":"#",
     "lien":"#",
-    "tags":["AAA","BBB","CCC"]
+    "tags":["Design Graphique","Maquette","UI","Figma","Illustrator","Conception"]
     },
-    {"nom":"Projet 2",
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    {"nom":"Gando",
+    "description":"Louez en toute confiance !",
     "image":"#",
     "lien":"#",
-    "tags":["AAA","DDD"]
+    "tags":["Conception","UI","Maquette","Figma","Illustration","UX"]
+    },
+    {"nom":"Méduse : Regard",
+    "description":"Une exposition sur le mythe de la méduse et le regard sur les femmes",
+    "image":"#",
+    "lien":"#",
+    "tags":["Scénographie","Conception","Illustration","UX","Miniatures","3D"]
+    },
+    {"nom":"Quantik",
+    "description":"Le jeu de société en ligne",
+    "image":"#",
+    "lien":"#",
+    "tags":["HTML","CSS","PHP","Base de donnée","Developpement","Back-end"]
+    },
+    {"nom":"Bar à Cocktail",
+    "description":"La base de donnée de commande d'un bar fictif",
+    "image":"#",
+    "lien":"#",
+    "tags":["Base de donnée","Conception","Developpement","Front-end","Back-end","UX"]
+    },
+    {"nom":"QRcade",
+    "description":"Une appli pour améliorer vos événements",
+    "image":"#",
+    "lien":"#",
+    "tags":["Conception","UX","Maquette","Figma"]
+    },
+    {"nom":"JCC",
+    "description":"Projet de cours autour de la collection de cartes",
+    "image":"#",
+    "lien":"#",
+    "tags":["UX","Interview","Observations"]
+    },
+    {"nom":"1finity",
+    "description":"Des jeux retrouvés dans un jeu d'horreur",
+    "image":"#",
+    "lien":"#",
+    "tags":["Developpement","Conception","Game Design","UI","Narrative Design"]
     }
 ]
