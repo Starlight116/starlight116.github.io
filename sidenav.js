@@ -51,6 +51,13 @@ function screenSize(){
     window.addEventListener("resize", function(){
         closeNav();
     });
+    //if i click on a link in the menu, the menu will close
+    const links = document.querySelectorAll('.nav-link');
+    links.forEach(link => {
+        link.addEventListener('click', function(){
+            closeNav();
+        });
+    });
 }
 window.onload = function() {
     screenSize();

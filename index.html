@@ -23,20 +23,20 @@
         <header>
             <img src="images/logo.png" alt="Logo"/>
             <nav id="desktop">
-                <a href="#">A propos</a>
-                <a href="#">Compétences</a>
-                <a href="#">Mes Projets</a>
-                <a href="#">Contact</a>
+                <a href="#Apropos">A propos</a>
+                <a href="#Competences">Compétences</a>
+                <a href="#projets">Mes Projets</a>
+                <a href="#contact">Contact</a>
                 <a class="action" href="ressources/CV.pdf">Télécharger le CV</a>
                 
             </nav>
             <nav id="mobile">
                 <div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="#">A propos</a>
-                    <a href="#">Compétences</a>
-                    <a href="#">Mes Projets</a>
-                    <a href="#">Contact</a>
+                    <a class="nav-link" href="#Apropos">A propos</a>
+                    <a class="nav-link" href="#Competences">Compétences</a>
+                    <a class="nav-link" href="#projets">Mes Projets</a>
+                    <a class="nav-link" href="#contact">Contact</a>
                     <br/>
                     <p class="line"></p>
                     <br/>
@@ -76,7 +76,7 @@
                     </div>
                 </div>
             </section>
-            <section class="about">
+            <section class="about" id="Apropos">
                 <h3 class="cartouche">A propos</h3>
                 <p class="aboutText">
                     Mon parcours atypique m'a permis de développer des compétences uniques, alliant technique et créativité. 
@@ -120,7 +120,7 @@
                         </div>
                     </div>
             </section>
-            <section class="skills">
+            <section class="skills" id="Competences">
                 <h3 class=cartouche>Compétences</h3>
                 <div class="comp">
                     <div class="skill">
@@ -179,43 +179,14 @@
                 </div>
                 
             </section>        
-            <section class="projects">
+            <section class="projects" id="projets">
                 <h2><img class="imageCute" src="images/anneau.png"/>Quelques projets sur lesquels j'ai travaillé <img class="imageCute" src="images/stars.png"/></h2>
-
-                <div class="cardLeft">
-                    <div class="insideCardLeft">
-                        <h4>Projet 1</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        
-                        <div class="tags">
-                            <p class="tag">AAA</p>
-                            <p class="tag">BBB</p>
-                            <p class="tag">CCC</p>
-                            <p class="tag">DDD</p>
-                        </div>
-
-                        <a href="#"><img src="icons/link.svg"></a>
-                    </div>
-                    <img class="cardImage" src="#" alt="Image du projet"/>
+                <div class="search-container">
+                    <input type="text" id="search-box" class="search-box" placeholder="Rechercher..." />
+                    <div id="results-container"></div>
                 </div>
-
-                <div class="cardRight">
-                    <img class="cardImage" src="#" alt="Image du projet"/>
-                    <div class="insideCardRight">
-                        <h4>Projet 2</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        
-                        <div class="tags">
-                            <p class="tag">AAA</p>
-                            <p class="tag">BBB</p>
-                        </div>
-
-                        <a href="#"><img src="icons/link.svg"></a>
-                    </div>
-                </div>
-                
             </section>
-            <section class="contact">
+            <section class="contact" id="contact">
                 <h3 class="cartouche">Contactez moi !</h3>
                 <p>Vous avez un projet en tête ? Vous souhaitez en savoir plus sur mon parcours ? 
                     <br/>N'hésitez pas à me contacter, je serais ravie d'échanger avec vous !</p>
@@ -232,5 +203,6 @@
             <p>© 2025 Camille Protat - Tous droits réservés</p>
             <p>Icones par <a href="https://icones8.fr/icons">Icon8</a></p>
         </footer>
+        <script src="searchbar.js"></script>
     </body>
 </html>
