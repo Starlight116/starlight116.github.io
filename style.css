@@ -360,7 +360,7 @@ header img{
     top: 0;
     left: 0;
     width: 95%;
-    height: 900%;
+    height: 1000%;
     z-index: -2;
     pointer-events: none;
 }    
@@ -455,6 +455,15 @@ header img{
     align-items: flex-end;
     text-align: right;
     align-content: flex-end;
+    gap: 10px;
+}
+.insideCardRight{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    align-content: flex-start;
+    gap: 10px;
 }
 .tags{
     display: flex;
