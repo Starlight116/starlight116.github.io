@@ -26,7 +26,7 @@ body{
 }
 /*text sizes*/
 h1{
-    font-size: 42px;
+    font-size: 40px;
     font-style: bold;
     font-weight: 400;
     line-height: 100%; 
@@ -34,7 +34,7 @@ h1{
     
 }
 h2{
-    font-size: 32px;
+    font-size: 30px;
     font-weight: bold;
     line-height: 100%; 
     color:var(--darkPink);
@@ -105,6 +105,7 @@ header img{
     border-radius: 60px;
     background: var(--purple);
     color: var(--white);
+    font-family: "Syne Tactile", sans-serif;
 }
 
 .action{
@@ -112,6 +113,7 @@ header img{
     border-radius: 60px;
     background: var(--purple);
     color: var(--white);
+    font-family: "Syne Tactile", sans-serif;
 }
 
 #desktop a{
@@ -119,7 +121,8 @@ header img{
     color: var(--dark-grey);
     height: fit-content;
     align-self: center;
-    padding: 15px;
+    padding: 14px;
+    font-family: "Syne Tactile", sans-serif;
 }
 
 #desktop a:hover{
@@ -151,7 +154,8 @@ header img{
     text-decoration: none;
     display: block;
     transition: 0.3s;
-    font-size: 32px;
+    font-size: 26px;
+    font-family: "Syne Tactile", sans-serif;
     
 }
 .sidenav .line{
@@ -254,8 +258,8 @@ header img{
 }
 
 .picture{
-    max-width: 500px;
-    max-height: 500px;
+    max-width: 400px;
+    max-height: 400px;
     /*la taille doit réduire si l'écran est plus petit*/
     width: 100%;
     height: auto;
