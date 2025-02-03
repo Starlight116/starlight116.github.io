@@ -27,8 +27,7 @@ body{
 /*text sizes*/
 h1{
     font-size: 40px;
-    font-style: bold;
-    font-weight: 400;
+    font-weight: bold;
     line-height: 100%; 
     font-family: "Syne Tactile", sans-serif;
     
@@ -360,7 +359,7 @@ header img{
     top: 0;
     left: 0;
     width: 95%;
-    height: auto;
+    height: 100vh;
     z-index: -2;
     pointer-events: none;
 }    
