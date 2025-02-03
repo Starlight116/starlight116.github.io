@@ -360,7 +360,7 @@ header img{
     top: 0;
     left: 0;
     width: 95%;
-    height: 1000%;
+    height: auto;
     z-index: -2;
     pointer-events: none;
 }    
