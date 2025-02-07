@@ -331,6 +331,7 @@ header img{
     border-radius: 40px;
     width: 10px;
     height: 10px;
+    flex-shrink: 0;
 }
 
 @keyframes ping {
