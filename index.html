@@ -204,5 +204,12 @@
             <p>Icones par <a href="https://icones8.fr/icons">Icon8</a></p>
         </footer>
         <script src="searchbar.js"></script>
+        <script>
+            function adjustStarshineHeight() {
+                document.getElementById('starshine').style.height = document.body.scrollHeight + 'px';
+            }
+            window.onload = adjustStarshineHeight;
+            window.onresize = adjustStarshineHeight;
+        </script>
     </body>
 </html>
