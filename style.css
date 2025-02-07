@@ -361,7 +361,7 @@ header img{
     position: absolute;
     top: 0;
     left: 0;
-    width: 97%;
+    width: 96%;
     height : 100%;
     z-index: -2;
     pointer-events: none;
