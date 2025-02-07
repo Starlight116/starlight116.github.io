@@ -81,3 +81,8 @@ window.onload = function() {
     screenSize();
     adjustStarshineHeight();
 };
+
+window.onresize = function() {
+    screenSize();
+    adjustStarshineHeight();
+};
