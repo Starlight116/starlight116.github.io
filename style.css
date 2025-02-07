@@ -264,7 +264,7 @@ header img{
     position: relative; /* Position relative pour leur donner un contexte */
     z-index: 1; /* S'assure qu'ils apparaissent au-dessus de #starshine */
     padding: 5% 10%;
-    margin: 0 15%; 
+    margin: 0 5%; 
 }
 
 .infos{
@@ -317,7 +317,7 @@ header img{
 }
 .heartbeat {
     position: absolute;
-    background-color: #7932f6;
+    background-color: var(--purple);
     border-radius: 40px;
     width: 10px;
     height: 10px;
