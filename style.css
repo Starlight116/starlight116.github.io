@@ -317,7 +317,6 @@ header img{
 }
 .heartbeat {
     position: absolute;
-    width: fit-content;
     background-color: #7932f6;
     border-radius: 40px;
     width: 10px;
@@ -328,7 +327,6 @@ header img{
 
 .dot {
     position: relative;
-    width: fit-content;
     background: linear-gradient(135deg, var(--purple), var(--blue) 48%, var(--dark-grey));
     border-radius: 40px;
     width: 10px;
