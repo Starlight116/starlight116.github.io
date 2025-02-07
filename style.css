@@ -449,7 +449,6 @@ header img{
     margin: 5px 0;
     background: var(--white);
     box-shadow: -4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    flex-wrap: wrap;
 }
 .insideCardLeft{
     display: flex;
