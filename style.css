@@ -362,7 +362,7 @@ header img{
     top: 0;
     left: 0;
     width: 96%;
-    height : 100%;
+    height : auto;
     z-index: -2;
     pointer-events: none;
 }    

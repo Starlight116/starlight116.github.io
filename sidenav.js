@@ -11,17 +11,31 @@ function reorderContent() {
     const container = document.querySelector('.hero');
     const image = document.querySelector('.picture');
     const text = document.querySelector('.text');
+    const cardRight = document.querySelectorAll('.cardRight');
+    const cardLeft = document.querySelectorAll('.cardLeft');
 
     if (window.innerWidth <= 900) {
         // Place l'image avant le texte
         if (container.firstChild !== image) {
             container.insertBefore(image, text);
         }
+        cardRight.forEach(card =>{
+            card.style.flexDirection="column"
+        });
+        cardLeft.forEach(card =>{
+            card.style.flexDirection="column"
+        });
     } else {
         // Place l'image après le texte
         if (container.firstChild !== text) {
             container.appendChild(image);
         }
+        cardRight.forEach(card =>{
+            card.style.flexDirection="row"
+        });
+        cardLeft.forEach(card =>{
+            card.style.flexDirection="row"
+        });
     }
 }
 
@@ -59,6 +73,9 @@ function screenSize(){
 function adjustStarshineHeight() {
     document.getElementById('starshine').style.height = document.body.scrollHeight + 'px';
 }
+
+const observer = new MutationObserver(updateStarshineHeight);
+observer.observe(document.getElementById('results-container'), { childList: true, subtree: true });
 
 window.onload = function() {
     screenSize();
