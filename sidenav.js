@@ -70,19 +70,22 @@ function screenSize(){
     });
 }
 
-function adjustStarshineHeight() {
-    document.getElementById('starshine').style.height = document.body.scrollHeight + 'px';
+function updateStarshineHeight() {
+    let starshine = document.getElementById('starshine');
+    if (starshine) {
+        starshine.style.height = document.body.scrollHeight + 'px';
+    }
 }
 
+// Exécuter au chargement et à chaque modification du contenu
+window.onload = updateStarshineHeight;
+window.onresize = updateStarshineHeight;
+
+// Observer les changements dans `#results-container`
 const observer = new MutationObserver(updateStarshineHeight);
 observer.observe(document.getElementById('results-container'), { childList: true, subtree: true });
 
 window.onload = function() {
-    screenSize();
-    adjustStarshineHeight();
-};
-
-window.onresize = function() {
     screenSize();
     adjustStarshineHeight();
 };
