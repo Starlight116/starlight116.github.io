@@ -77,15 +77,16 @@ function updateStarshineHeight() {
     }
 }
 
-// Exécuter au chargement et à chaque modification du contenu
-window.onload = updateStarshineHeight;
-window.onresize = updateStarshineHeight;
-
 // Observer les changements dans `#results-container`
 const observer = new MutationObserver(updateStarshineHeight);
 observer.observe(document.getElementById('results-container'), { childList: true, subtree: true });
 
 window.onload = function() {
     screenSize();
-    adjustStarshineHeight();
+    updateStarshineHeight();
+};
+
+window.onresize = function(){
+    screenSize();
+    updateStarshineHeight();
 };
