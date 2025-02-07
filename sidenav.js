@@ -55,6 +55,12 @@ function screenSize(){
         });
     });
 }
+
+function adjustStarshineHeight() {
+    document.getElementById('starshine').style.height = document.body.scrollHeight + 'px';
+}
+
 window.onload = function() {
     screenSize();
+    adjustStarshineHeight();
 };
