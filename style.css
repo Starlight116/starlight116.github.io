@@ -265,7 +265,7 @@ header img{
     z-index: 1; /* S'assure qu'ils apparaissent au-dessus de #starshine */
     padding: 5% 10%;
     margin: 0 5%; 
-    @media (min-width: 768px) {
+    @media (min-width: 1080px) {
         margin: 0 10%;
     }
 }
