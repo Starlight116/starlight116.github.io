@@ -14,7 +14,7 @@ function reorderContent() {
     const cardRight = document.querySelectorAll('.cardRight');
     const cardLeft = document.querySelectorAll('.cardLeft');
 
-    if (window.innerWidth <= 900) {
+    if (window.innerWidth <= 768) {
         // Place l'image avant le texte
         if (container.firstChild !== image) {
             container.insertBefore(image, text);
