@@ -11,17 +11,11 @@
     "lien":"#",
     "tags":["Conception","UI","Maquette","Figma","Illustration","UX"]
     },
-    {"nom":"Méduse : Regard",
+    {"nom":"Exposition Immersive Méduse",
     "description":"Une exposition sur le mythe de la méduse et le regard sur les femmes",
     "image":"#",
     "lien":"#",
     "tags":["Scénographie","Conception","Illustration","UX","Miniatures","3D"]
-    },
-    {"nom":"Quantik",
-    "description":"Le jeu de société en ligne",
-    "image":"#",
-    "lien":"#",
-    "tags":["HTML","CSS","PHP","Base de donnée","Developpement","Back-end"]
     },
     {"nom":"Bar à Cocktail",
     "description":"La base de donnée de commande d'un bar fictif",
@@ -42,9 +36,15 @@
     "tags":["UX","Interview","Observations"]
     },
     {"nom":"1finity",
-    "description":"Des jeux retrouvés dans un jeu d'horreur",
+    "description":"Une histoire de famille racontée par des jeux perdus",
     "image":"#",
     "lien":"#",
     "tags":["Developpement","Conception","Game Design","UI","Narrative Design"]
+    },
+    {"nom":"Anti-Gaspi",
+    "description":"Gérer son frigo et éviter le gaspillage alimentaire",
+    "image":"#",
+    "lien":"#",
+    "tags":["UserFlow","UX","Conception"]
     }
 ]
