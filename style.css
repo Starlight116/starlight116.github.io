@@ -464,7 +464,6 @@ header img{
 .cardImage{
     max-width: 200px;
     max-height: 200px;
-    background-color: #d4d4d4;
     flex-wrap: inherit;
 }
 
