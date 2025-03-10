@@ -292,6 +292,7 @@ header img{
 .contain{
     display: flex;
     flex-direction: row;
+    align-items: center;
 
 }
 .projects a>img{
