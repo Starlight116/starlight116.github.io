@@ -25,19 +25,19 @@
     },
     {"nom":"JCC",
     "description":"Projet autour de la collection de cartes",
-    "image":"images/#",
+    "image":"images/jcc.png",
     "lien":"#",
     "tags":["UX","Interview","Observations"]
     },
     {"nom":"1finity",
     "description":"Une histoire de famille racontée par des jeux perdus",
-    "image":"images/#",
+    "image":"images/Bun.png",
     "lien":"#",
     "tags":["Developpement","Conception","Game Design","UI","Narrative Design"]
     },
     {"nom":"Anti-Gaspi",
     "description":"Gérer son frigo et éviter le gaspillage alimentaire",
-    "image":"images/#",
+    "image":"images/Gaspi.png",
     "lien":"#",
     "tags":["UserFlow","UX","Conception"]
     }
