@@ -424,11 +424,11 @@ header img{
 }
 
 .cardLeft{
-    justify-content: left;
+    justify-content: right;
 }
 
 .cardRight{
-    justify-content: right;
+    justify-content: left;
 }
 
 .insideCardLeft{
