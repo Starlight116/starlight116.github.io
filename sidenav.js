@@ -8,17 +8,10 @@ function closeNav() {
 }
 
 function reorderContent() {
-    const container = document.querySelector('.hero');
-    const image = document.querySelector('.picture');
-    const text = document.querySelector('.text');
     const cardRight = document.querySelectorAll('.cardRight');
     const cardLeft = document.querySelectorAll('.cardLeft');
 
     if (window.innerWidth <= 1080) {
-        // Place l'image avant le texte
-        if (container.firstChild !== image) {
-            container.insertBefore(image, text);
-        }
         cardRight.forEach(card =>{
             card.style.flexDirection="column"
         });
@@ -26,10 +19,6 @@ function reorderContent() {
             card.style.flexDirection="column"
         });
     } else {
-        // Place l'image après le texte
-        if (container.firstChild !== text) {
-            container.appendChild(image);
-        }
         cardRight.forEach(card =>{
             card.style.flexDirection="row"
         });
@@ -70,18 +59,6 @@ function screenSize(){
     });
 }
 
-function updateStarshineHeight() {
-    let starshine = document.getElementById('starshine');
-    if (starshine) {
-        starshine.style.height = document.body.scrollHeight + 'px';
-    }
-}
-
-// Observer les changements dans `#results-container`
-const observer = new MutationObserver(updateStarshineHeight);
-observer.observe(document.getElementById('results-container'), { childList: true, subtree: true });
-
 window.onload = function() {
     screenSize();
-    updateStarshineHeight();
 };

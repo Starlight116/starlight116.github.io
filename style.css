@@ -1,7 +1,7 @@
 /*colors*/
 :root{
     --dark-grey: #363C54;
-    --purple: #6F67CC;
+    --purple: #35126Aff;
     --pink: #ECCDD4;
     --lightblue:#97A5EC;
     --blue:#424592;
@@ -331,65 +331,10 @@ header img{
     margin: 0 10px;
 }
 
-#starshine {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 96%;
-    height : auto;
-    z-index: -2;
-    pointer-events: none;
-}    
-.shine {
-    display: block;
-    position: absolute;
-    background-image: url('images/sparkle.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-    overflow: hidden;
-    z-index: -1;
-    color: transparent;
-    -moz-opacity: 0.0;
-    opacity: 0.0;
-    animation: glitter 4s linear 0s infinite normal;
-}
-.shine.small {
-    width: 20px;
-    height: 20px;
-}
-.shine.medium {
-    width: 30px;
-    height: 30px;
-}
-.shine.large {
-    width: 50px;
-    height: 50px;
-}
-  
-/*CSS3 keyframes for glittering effect*/
-@-webkit-keyframes glitter {
-    0% {
-        -webkit-transform: scale(0.3) rotate(0deg);
-        opacity: 0;
-    }
-    25% {
-        -webkit-transform: scale(1) rotate(360deg);
-        opacity: 1;
-    }
-    50% {
-        -webkit-transform: scale(0.3) rotate(720deg);
-        opacity: 0;
-    }
-    100% {
-        -webkit-transform: scale(0.3) rotate(0deg);
-        opacity: 0;
-    }
-}
 .cartouche {
     border-radius: 60px;
-    background: var(--blue);
-    color: var(--yellow);
+    background: var(--purple);
+    color: var(--pink);
     padding: 15px 30px;
     margin: 0 10px;
 
