@@ -40,7 +40,7 @@ h2{
     font-weight: bold;
     line-height: 100%; 
     color:var(--darkPink);
-    padding-bottom: 5%;
+    padding-top: 5%;
     font-family: "Syne Tactile", sans-serif;
 
 }
@@ -206,7 +206,7 @@ header img{
     align-items: center;
     justify-content: space-between;
     text-align: left;
-    gap: 25px;
+    gap: 20px;
     background-color: var(--white);}
 
 .skills,.contact {
@@ -332,10 +332,8 @@ header img{
 }
 
 .cartouche {
-    border-radius: 60px;
-    background: var(--purple);
-    color: var(--pink);
-    padding: 15px 30px;
+    color: var(--darkPink);
+    padding: 10px 30px;
     margin: 0 10px;
 
 }
