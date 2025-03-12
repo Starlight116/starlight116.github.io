@@ -302,8 +302,12 @@ header img{
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
+.contain img{
+    max-width: 25px;
+    max-height: 25px;
+}
+
 .projects a>img{
     max-width: 20px;
     max-height: 20px;
