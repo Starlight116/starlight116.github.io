@@ -1,64 +1,50 @@
+// Description: This file contains the javascript code for the sidenav menu.
+// Author: Starlight
+// Updated 20/03/2025
+
+//open the sidenav menu
 function openNav() {
-    document.getElementById("mySidenav").style.width = "80%";
+    if(window.innerWidth < 1000){
+        document.getElementById("sidenav").style.width = "80%";
+        document.getElementById("sidenav").style.display = "flex";
+    }
 }
 
-  /* Close/hide the sidenav */
+//Close/hide the sidenav menu
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+    if(window.innerWidth < 1000){
+        document.getElementById("sidenav").style.width = "0";  
+        document.getElementById("sidenav").style.display = "none";
+    }    
 }
 
-function reorderContent() {
-    const cardRight = document.querySelectorAll('.cardRight');
-    const cardLeft = document.querySelectorAll('.cardLeft');
+//if i click on the menu icon, the menu will open
+const menuIcon = document.getElementById('open');
+menuIcon.addEventListener('click', function(){
+    openNav();
+});
 
-    if (window.innerWidth <= 1080) {
-        cardRight.forEach(card =>{
-            card.style.flexDirection="column"
-        });
-        cardLeft.forEach(card =>{
-            card.style.flexDirection="column"
-        });
-    } else {
-        cardRight.forEach(card =>{
-            card.style.flexDirection="row"
-        });
-        cardLeft.forEach(card =>{
-            card.style.flexDirection="row"
-        });
-    }
-}
-
-function screenSize(){
-    const mobile = document.getElementById("mobile");
-    const desktop = document.getElementById("desktop");
-    const sidenav = document.getElementById("mySidenav");
-    const container = document.querySelector('.hero');
-    reorderContent();
-    // If the screen is less than 900px wide, show the mobile menu
-    if (window.matchMedia("(max-width: 900px)").matches) {
-        sidenav.style.width = "0";
-        mobile.style.display = "block";
-        desktop.style.display = "none";
-        container.style.flexDirection = "column";
-    } else {
-        // If the screen is greater than 900px wide, show the desktop menu
-        mobile.style.display = "none";
-        desktop.style.display = "block";
-        container.style.flexDirection = "row";
-    }
-    // if i change the screen size, the menu will close
-    window.addEventListener("resize", function(){
+//if i click on a link in the menu, the menu will close
+const links = document.querySelectorAll('.nav-link');
+links.forEach(link => {
+    link.addEventListener('click', function(){
         closeNav();
     });
-    //if i click on a link in the menu, the menu will close
-    const links = document.querySelectorAll('.nav-link');
-    links.forEach(link => {
-        link.addEventListener('click', function(){
-            closeNav();
-        });
-    });
-}
+});
 
-window.onload = function() {
-    screenSize();
-};
+
+//if i resize the window, the menu will close
+window.addEventListener("resize", function(){
+    closeNav();
+    //if the window width is greater than 800px, the menu will be displayed as a flex container
+    if(window.innerWidth > 999){
+        document.getElementById("sidenav").style.display = "flex";
+        document.getElementById("sidenav").style.width = "auto";
+    }
+});
+
+//if i click on the close button, the menu will close
+const closeBtn = document.getElementById('close');
+closeBtn.addEventListener('click', function(){
+    closeNav();
+});

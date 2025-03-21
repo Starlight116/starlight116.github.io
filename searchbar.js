@@ -1,3 +1,7 @@
+// Description: This file contains the javascript code for the search bar and the project cards.
+// Author: Starlight
+// Updated 20/03/2025
+
 let data = [];
 
 const searchBox = document.getElementById('search-box');
@@ -45,8 +49,7 @@ function displayData(dataToDisplay) {
             card.appendChild(insideCard);
             if (dataToDisplay.indexOf(item) % 2 !== 0) {
                 card.appendChild(image);
-            }
-            
+            }         
             resultsContainer.appendChild(card);
         });
     } else {
@@ -56,7 +59,7 @@ function displayData(dataToDisplay) {
     }
 }
 
-fetch('dataProjet.json')
+fetch('ressources/dataProjet.json')
     .then(response => response.json())
     .then(jsonData => {
         data = jsonData;
