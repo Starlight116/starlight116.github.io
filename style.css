@@ -362,6 +362,7 @@ footer a{
     gap: 10px;
 }
 
+
 /* Styles pour les écrans mobile */
 @media (max-width: 999px) {
     header {
