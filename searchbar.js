@@ -13,6 +13,8 @@ function displayData(dataToDisplay) {
 
     if (dataToDisplay.length > 0) {
         dataToDisplay.forEach(item => {
+            const lien = document.createElement('a');
+            lien.href = item.lien;
             const card = document.createElement('div');
             card.className = dataToDisplay.indexOf(item) % 2 === 0 ? 'cardRight' : 'cardLeft';
             const insideCard = document.createElement('div');
@@ -20,7 +22,7 @@ function displayData(dataToDisplay) {
             const image = document.createElement('img');
             image.src = item.image;
             image.className = 'cardImage';
-            const title = document.createElement('h4');
+            const title = document.createElement('h3');
             title.textContent = item.nom;
             const description = document.createElement('p');
             description.textContent = item.description;
@@ -32,11 +34,6 @@ function displayData(dataToDisplay) {
                 tagElement.className = 'tag';
                 tagsContainer.appendChild(tagElement);
             });
-            const lien = document.createElement('a');
-            lien.href = item.lien;
-            const lienImg = document.createElement('img');
-            lienImg.src = "icons/link.svg";
-            lien.appendChild(lienImg);
 
             if (dataToDisplay.indexOf(item) % 2 === 0) {
                 card.appendChild(image);
@@ -44,13 +41,13 @@ function displayData(dataToDisplay) {
             insideCard.appendChild(title);
             insideCard.appendChild(description);
             insideCard.appendChild(tagsContainer);
-            insideCard.appendChild(lien);
             
             card.appendChild(insideCard);
             if (dataToDisplay.indexOf(item) % 2 !== 0) {
                 card.appendChild(image);
-            }         
-            resultsContainer.appendChild(card);
+            }
+            lien.appendChild(card);         
+            resultsContainer.appendChild(lien);
         });
     } else {
         const message = document.createElement('p');

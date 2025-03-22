@@ -353,6 +353,9 @@ footer a{
 .cardLeft, .cardRight{
     color:var(--secondary)
 }
+.insideCardLeft h3, .insideCardRight h3{
+    margin: 0;
+}
 
 .tag{
     border-radius: 10px;
@@ -362,7 +365,6 @@ footer a{
     padding: 10px;
     justify-content: center;
     align-items: center;
-    gap: 10px;
     margin: 0;
 }
 
@@ -533,7 +535,7 @@ footer a{
         justify-content: center;
         align-items: center;
         align-content: space-between;
-        column-gap: 10px;
+        gap: 10px;
         align-self: stretch;
         flex-wrap: wrap;
     }
@@ -668,7 +670,7 @@ footer a{
     }
     .cardLeft, .cardRight{
         display: flex;
-        padding: 15px 30px;
+        padding: 30px;
         align-items: center;
         gap: 120px;
         flex-shrink: 0;
