@@ -359,6 +359,7 @@ footer a{
     justify-content: center;
     align-items: center;
     gap: 10px;
+    margin: 0;
 }
 
 
@@ -676,6 +677,7 @@ footer a{
         justify-content: space-between;
         align-items: flex-start;
         flex: 1 0 0;
+        text-align: left;
     }
     .insideCardRight{
         display: flex;
@@ -683,13 +685,23 @@ footer a{
         justify-content: space-between;
         align-items: flex-end;
         flex: 1 0 0;
+        text-align: right;
     }
-    .tags{
+    .insideCardLeft .tags{
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         align-content: flex-start;
-        column-gap: 10px;
+        gap: 10px;
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+    .insideCardRight .tags{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        align-content: flex-end;
+        gap: 10px;
         align-self: stretch;
         flex-wrap: wrap;
     }
