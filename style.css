@@ -335,20 +335,24 @@ footer a{
     border: 2px solid var(--accent);
     background: var(--header);
     display: flex;
-
+    color: var(--accent60);
     padding: 12px;
     justify-content: center;
     align-items: center;
 }
+
 #results-container{
     display: flex;
     flex-direction: column;
     gap: 30px;
     align-items: center;
     align-self: stretch;
+    padding: 0px 50px;
 }
 
-
+.cardLeft, .cardRight{
+    color:var(--secondary)
+}
 
 .tag{
     border-radius: 10px;
