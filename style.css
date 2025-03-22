@@ -535,6 +535,10 @@ footer a{
         flex: 1 0 0;
         text-align: center;
     }
+    .insideCardLeft p, .insideCardRight p{
+        margin: 20px;
+    }
+    
     .tags{
         display: flex;
         justify-content: center;
