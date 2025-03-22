@@ -520,8 +520,10 @@ footer a{
         justify-content: space-between;
         align-items: center;
         border-radius: 10px;
+        gap: 10px;
         background: var(--accent);
     }
+
     .insideCardLeft, .insideCardRight{
         display: flex;
         flex-direction: column;
@@ -674,7 +676,7 @@ footer a{
         align-items: center;
         gap: 120px;
         flex-shrink: 0;
-        border-radius: 10px;
+        border-radius: 15px;
         background: var(--accent);
     }
     .insideCardLeft{
