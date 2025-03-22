@@ -51,6 +51,7 @@ h1{
     font-weight: bold;
     line-height: 100%; 
     font-family: "Syne Mono", sans-serif;
+    margin: 0;
     
 }
 h2{
@@ -67,12 +68,14 @@ h3{
     font-weight: bold;
     line-height: 100%; /* 36px */
     font-family: "Syne Mono", sans-serif;
+    margin: 0;
 }
 h4{
     font-size: 32px;
     font-weight: bold;
     line-height: 100%; /* 22px */
     font-family: "Syne Mono", sans-serif;
+    margin: 0;
 }
 h5{
     font-size: 30px;
