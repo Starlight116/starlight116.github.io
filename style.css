@@ -347,7 +347,7 @@ footer a{
     gap: 30px;
     align-items: center;
     align-self: stretch;
-    padding: 0px 50px;
+    padding: 40px;
 }
 
 .cardLeft, .cardRight{
@@ -670,6 +670,7 @@ footer a{
         align-items: center;
         background: var(--background);
     }
+
     .cardLeft, .cardRight{
         display: flex;
         padding: 30px;
