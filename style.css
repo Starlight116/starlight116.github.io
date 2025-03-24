@@ -325,7 +325,7 @@ footer a{
     width: 100px;
     height: 100px;
 }
-.projets{
+.projets, .vrac{
     color:var(--primary);
     display: flex;
     padding: 40px 39px;
@@ -371,7 +371,7 @@ footer a{
     margin: 0;
 }
 
-.contact{
+.contact {
     color:var(--text);
     background-color: var(--secondary);
 }
@@ -406,6 +406,115 @@ footer a{
     align-items: center;
     flex-shrink: 0;
     align-self: stretch;
+}
+
+article figure {
+    margin: 0;
+}
+
+article img {
+    display: block;
+    width: 100%;
+}
+article img:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    /*small zoom on hover*/
+    transform: scale(1.02);
+    transition: transform 0.3s;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 99; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 75%;
+    max-width: 75%;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(1)}
+    to {-webkit-transform:scale(2)}
+}
+ 
+@keyframes zoom {
+    from {transform:scale(0.4)}
+    to {transform:scale(1)}
+}
+
+@-webkit-keyframes zoom-out {
+    from {transform:scale(1)}
+    to {transform:scale(0)}
+}
+@keyframes zoom-out {
+    from {transform:scale(1)}
+    to {transform:scale(0)}
+}
+
+.closebtn{
+    color:white;
+    position:absolute;
+    top: 10px;
+    right: 25px;
+    z-index: 99;
+    cursor:pointer;
+    font-size:32px;
+    font:"Syne Mono";
+
+}
+
+/* Add Animation */
+.modal-content {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+.gallery{
+    margin: 0 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.bento {
+    --bento-cols: 3;
+    --bento-rows: 5;
+    display: grid;
+    grid-template-columns: repeat(var(--bento-cols), 1fr);
+    grid-template-rows: repeat(var(--bento-rows), 1fr);
+    width: 100%;
+}
+
+.bento > * {
+    overflow: hidden;
+    position: relative;
+}
+
+.moodboards > :nth-child(1){
+    grid-column: span 2;
+    grid-row: span 3;
 }
 
 /* Styles pour les écrans mobile */
