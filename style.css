@@ -2,13 +2,13 @@
 :root {
     @media (prefers-color-scheme: light) {
         --text: rgb(70, 42, 47);
-        --background: rgb(133, 121, 187);
+        --background: #8579bb;
         --primary: rgb(12, 0, 66);
         --primary20: rgba(12, 0, 66, 0.2);
         --primary40: rgba(12, 0, 66, 0.4);
         --primary60: rgba(12, 0, 66, 0.6);
         --primary80: rgba(12, 0, 66, 0.8);
-        --secondary: rgb(255, 210, 97);
+        --secondary: #ffd261;
         --secondary20: rgba(255, 210, 97, 0.2);
         --secondary40: rgba(255, 210, 97, 0.4);
         --secondary60: rgba(255, 210, 97, 0.6);
@@ -410,6 +410,7 @@ footer a{
 
 article figure {
     margin: 0;
+    border-radius: 10px;
 }
 
 article img {
@@ -500,7 +501,7 @@ article img:hover {
 }
 .bento {
     --bento-cols: 3;
-    --bento-rows: 5;
+    --bento-rows: 3;
     display: grid;
     grid-template-columns: repeat(var(--bento-cols), 1fr);
     grid-template-rows: repeat(var(--bento-rows), 1fr);
