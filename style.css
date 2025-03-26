@@ -443,13 +443,13 @@ article img:hover {
 .modal-content {
     margin: auto;
     display: block;
-    width: 75%;
+    width: 40%;
     max-width: 75%;
 }
 
 @-webkit-keyframes zoom {
     from {-webkit-transform:scale(1)}
-    to {-webkit-transform:scale(2)}
+    to {-webkit-transform:scale(1.5)}
 }
  
 @keyframes zoom {
@@ -474,8 +474,15 @@ article img:hover {
     z-index: 99;
     cursor:pointer;
     font-size:32px;
-    font:"Syne Mono";
-
+    font-family:"Syne Mono";
+}
+.caption{
+    color:white;
+    margin-top: 50px;
+    text-align: center;
+    z-index: 99;
+    font-size: 20px;
+    font-family:"Syne Mono";
 }
 
 /* Add Animation */
