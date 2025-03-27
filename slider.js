@@ -1,18 +1,23 @@
-// Description: This file contains the javascript code for the carousel slider.
-// Author: Starlight
-// Updated 20/03/2025
+let index = 0;
 
-const slidesContainer = document.getElementById("carrousel");
-const slide = document.querySelector(".slide");
-const prevButton = document.getElementById("fleche-gauche");
-const nextButton = document.getElementById("fleche-droite");
+function moveSlide(direction) {
+const carrousel = document.querySelector('.carrousel');
+const slides = document.querySelectorAll('.carrousel img');
+const totalSlides = slides.length;
 
-nextButton.addEventListener("click", () => {
-  const slideWidth = slide.clientWidth;
-  slidesContainer.scrollLeft += slideWidth;
-});
+// Largeur d'une slide (inclut le gap)
+const slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(carrousel).gap);
 
-prevButton.addEventListener("click", () => {
-  const slideWidth = slide.clientWidth;
-  slidesContainer.scrollLeft -= slideWidth;
-});
+// Met à jour l'index
+index += direction;
+
+if (index < 0) {
+index = totalSlides - 1; // Retourne à la dernière slide
+} else if (index >= totalSlides) {
+index = 0; // Retourne à la première slide
+}
+
+// Applique la transformation
+const offset = index * slideWidth;
+carrousel.style.transform = `translateX(-${offset}px)`;
+}

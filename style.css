@@ -588,13 +588,165 @@ article img:hover {
     grid-row: span 2; 
 }
 
+.etiquette {
+    display: flex;
+    margin: 0 5%; /* Utiliser un pourcentage pour une adaptation plus flexible */
+    transform: rotate(-3.479deg);
+    padding: 15px 10px; /* Réduire le padding pour les petits écrans */
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background: var(--primary20);
+    gap: 10px; /* Réduire l'espacement pour les petits écrans */
+    flex-wrap: wrap; /* Permettre aux éléments de passer à la ligne si l'espace est insuffisant */
+}
+
+/* Media query pour les écrans plus larges */
+@media (min-width: 768px) {
+    .etiquette {
+        margin: 0 20%; /* Revenir à la marge originale pour les grands écrans */
+        padding: 30px 20px; /* Revenir au padding original pour les grands écrans */
+        gap: 20px; /* Revenir à l'espacement original pour les grands écrans */
+        flex-wrap: nowrap; /* Empêcher les éléments de passer à la ligne sur les grands écrans */
+    }
+}
+.projectTitle{
+    color: var(--primary);
+    text-align: center;
+    margin: 80px 0;
+}
+.projectImg{
+    width: 200px;
+    height: 200px;
+    transform: rotate(-0.001deg);
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+}
+.projectDescribe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-shrink: 0;
+}
+.projectDescribeText {
+    color: var(--primary);
+    align-self: stretch;
+    overflow: hidden; /* Empêche le dépassement du contenu */
+    text-overflow: ellipsis; /* Ajoute des points de suspension si le texte est trop long */
+    white-space: nowrap; /* Empêche le texte de s'étendre sur plusieurs lignes */
+}
+.projectButton{
+    display: flex;
+    transform: rotate(-0.001deg);
+    padding: 20px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: var(--text);
+    color: var(--secondary);
+    text-align: center;
+    /* titles/h6 */
+    font-family: "Syne Mono";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 24px */
+    letter-spacing: -1.2px;
+}
+iframe{
+    margin-bottom: 30px;
+}
+.projectText{
+    color: var(--primary);
+    text-align: left;
+    margin: 0 20%;
+}
+
+.projectText h2{
+text-align: center;
+}
+.hslider {
+    border-radius: 10px;
+    background: var(--primary60);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    margin:0 20%;
+}
+
+.carrousel-container {
+    width: auto;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+
+.carrousel {
+display: flex;
+transition: transform 0.5s ease-in-out;
+z-index: 0;
+align-items: center;
+gap: 15px; /* Espacement entre les images */
+}
+
+.carrousel img {
+width: calc(100% - 10px); /* Ajuste la largeur pour inclure le gap */
+height: auto; /* Conserve les proportions des images */
+object-fit: cover; /* Remplit la slide tout en conservant les proportions */
+flex-shrink: 0; /* Empêche les images de rétrécir */
+}
+
+.projectImages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+.projectImages img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+button {
+    width: 59px;
+    height: 59px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    background-color: var(--secondary);
+    color: var(--text);
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 /* Styles pour les écrans mobile */
 @media (max-width: 999px) {
     header {
         flex-shrink: 0;
     }
     
-
+        .projectText{
+            margin: 0 10%;
+        }
+        .hslider{
+            margin: 0 10%;
+        }
     nav {
         position: absolute;
         z-index: 100;
@@ -727,6 +879,7 @@ article img:hover {
         padding-top: 30px;
         flex-direction: column;
         align-items: center;
+        gap:10px;
         background-color: var(--background);
     }
 
