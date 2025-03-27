@@ -590,7 +590,7 @@ article img:hover {
 
 .etiquette {
     display: flex;
-    margin: 0 5%; /* Utiliser un pourcentage pour une adaptation plus flexible */
+    margin: 0 10%; /* Utiliser un pourcentage pour une adaptation plus flexible */
     transform: rotate(-3.479deg);
     padding: 15px 10px; /* Réduire le padding pour les petits écrans */
     justify-content: space-between;
@@ -668,6 +668,7 @@ iframe{
 .projectText h2{
 text-align: center;
 }
+
 .hslider {
     border-radius: 10px;
     background: var(--primary60);
@@ -676,9 +677,17 @@ text-align: center;
     align-items: center;
     gap: 20px;
     position: relative;
-    margin:0 20%;
+    margin:0 10%;
 }
 
+
+.gando{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.gando > * {
+    grid-column: span 2;
+}
 .carrousel-container {
     width: auto;
     height: auto;
@@ -702,7 +711,7 @@ object-fit: cover; /* Remplit la slide tout en conservant les proportions */
 flex-shrink: 0; /* Empêche les images de rétrécir */
 }
 
-.projectImages{
+.projectImages, .projectImages2, .projectImages3{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -716,6 +725,28 @@ flex-shrink: 0; /* Empêche les images de rétrécir */
     object-fit: cover;
     border-radius: 10px;
 }
+.projectImages2 img{
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.projectImages3 img{
+    width: 400px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.hproject{
+    display: flex;
+    flex-direction: row;
+    margin:auto;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 button {
     width: 59px;
     height: 59px;
@@ -737,6 +768,31 @@ button:hover {
 
 /* Styles pour les écrans mobile */
 @media (max-width: 999px) {
+    .etiquette {
+        margin: 0 5%; /* Réduit les marges pour éviter le dépassement */
+        padding: 10px; /* Réduit le padding pour s'adapter aux petits écrans */
+        gap: 5px; /* Réduit l'espacement entre les éléments */
+        flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    }
+
+    .projectImg {
+        width: 100%; /* L'image prend toute la largeur disponible */
+        max-width: 150px; /* Limite la largeur maximale de l'image */
+        margin: 0 auto; /* Centre l'image */
+    }
+
+    .projectDescribe {
+        text-align: center; /* Centre le texte pour une meilleure lisibilité */
+    }
+
+    .projectDescribeText {
+        font-size: 14px; /* Réduit la taille du texte pour s'adapter aux petits écrans */
+    }
+
+    .projectButton {
+        font-size: 16px; /* Réduit la taille du bouton */
+        padding: 10px 15px; /* Ajuste le padding du bouton */
+    }
     header {
         flex-shrink: 0;
     }
