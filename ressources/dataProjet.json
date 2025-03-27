@@ -2,19 +2,19 @@
     {"nom":"Draw a Dream",
     "description":"Une appli de dessin pour apprendre le surréalisme aux enfants",
     "image":"images/DrawaDream.png",
-    "lien":"#",
+    "lien":"drawadream.html",
     "tags":["Design Graphique","Maquette","UI","Figma","Illustrator","Conception"]
     },
     {"nom":"Gando",
     "description":"Louez en toute confiance !",
     "image":"images/Gando.png",
-    "lien":"#",
+    "lien":"gando.html",
     "tags":["Conception","UI","Maquette","Figma","Illustration","UX"]
     },
     {"nom":"Exposition Nous, Méduse(s)",
     "description":"Une exposition sur le mythe de la méduse et le regard de la société sur les femmes",
     "image":"images/Meduse.png",
-    "lien":"#",
+    "lien":"meduse.html",
     "tags":["Scénographie","Conception","Illustration","UX","Miniatures","3D"]
     }
 ]

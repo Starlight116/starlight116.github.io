@@ -501,6 +501,92 @@ article img:hover {
     }
 }
 
+.bento {
+    display: grid;
+    grid-template-columns: repeat(var(--bento-cols, 3), 1fr); /* 3 colonnes par défaut */
+    grid-template-rows: repeat(var(--bento-rows, 2), auto); /* 2 lignes par défaut */
+    gap: 5px; /* Espacement entre les cases */
+    width: 100%; /* La grille prend toute la largeur disponible */
+}
+
+/* Styles pour les articles de la grille */
+.bentoImg {
+    position: relative;
+    overflow: hidden; /* Coupe les parties de l'image qui dépassent */
+    width: 100%; /* L'article prend toute la largeur de la case */
+    height: 100%; /* L'article prend toute la hauteur de la case */
+}
+
+/* Styles pour les images */
+.bentoImg figure img {
+    width: 100%; /* L'image prend toute la largeur de la case */
+    height: auto; /* L'image prend toute la hauteur de la case */
+    object-fit: cover; /* Remplit la case tout en conservant les proportions */
+    object-position: center; /* Centre l'image dans la case */
+    display: block; /* Supprime les espaces blancs autour de l'image */
+    border-radius: 10px; /* Facultatif : coins arrondis */
+}
+
+/* Configuration spécifique pour les moodboards */
+.moodboards > :nth-child(1) {
+    grid-column: span 3; /* L'élément occupe 3 colonnes */
+}
+
+.moodboards > :nth-child(2) {
+    grid-column: span 2; /* L'élément occupe 2 colonnes */
+    grid-row: span 2; /* L'élément occupe 2 lignes */
+}
+
+.moodboards > :last-child {
+    grid-column: span 2; /* L'élément occupe 2 colonnes */
+}
+
+.mockups > :nth-child(1) { 
+    grid-row: span 2; /* L'élément occupe 2 colonnes */
+}
+.mockups > :nth-child(2) { 
+    grid-row: span 2; /* L'élément occupe 2 colonnes */
+}
+.mockups > :nth-child(3) { 
+    grid-row: span 2; /* L'élément occupe 2 colonnes */
+}
+.mockups > :nth-child(4) { 
+    grid-row: span 2; /* L'élément occupe 2 colonnes */
+}
+.logos > :nth-child(2) { 
+    grid-column: span 2; /* L'élément occupe 2 colonnes */
+    grid-row: span 2; /* L'élément occupe 2 colonnes */
+}
+.conception > :nth-child(1) { 
+    grid-column: span 2; /* L'élément occupe 2 colonnes */
+    grid-row: span 2; /* L'élément occupe 2 colonnes */
+}
+.conception > :nth-child(5) { 
+    grid-column: span 2; /* L'élément occupe 2 colonnes */
+    grid-row: span 2; /* L'élément occupe 2 colonnes */
+}
+.chara > :nth-child(1) { 
+    grid-column: span 2; /* L'élément occupe 2 colonnes */
+    grid-row: span 2; /* L'élément occupe 2 colonnes */
+}
+.chara > :last-child { 
+    grid-column: span 3; /* L'élément occupe 2 colonnes */
+    grid-row: span 2; /* L'élément occupe 2 colonnes */
+}
+.illus > :nth-child(1) { 
+    grid-column: span 2; /* L'élément occupe 2 colonnes */
+    grid-row: span 2; /* L'élément occupe 2 colonnes */
+}
+.illus > :nth-child(4) { 
+    grid-column: span 3; /* L'élément occupe 2 colonnes */
+}
+.illus > :nth-child(5) { 
+    grid-column: span 2; /* L'élément occupe 2 colonnes */
+}
+.illus > :nth-last-child(2) { 
+    grid-column: span 2; /* L'élément occupe 2 colonnes */
+    grid-row: span 2; 
+}
 
 /* Styles pour les écrans mobile */
 @media (max-width: 999px) {
@@ -596,6 +682,14 @@ article img:hover {
         gap: 13px;
         flex: 1 0 0;
     }
+    .gallery{
+        margin: 0 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
     .footer p{
         color: var(--text);
         text-align: center;
@@ -679,100 +773,7 @@ article img:hover {
         align-self: stretch;
         flex-wrap: wrap;
     }
-    .gallery{
-        margin: 0 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-    }
-    .bento {
-        display: grid;
-        grid-template-columns: repeat(var(--bento-cols, 3), 1fr); /* 3 colonnes par défaut */
-        grid-template-rows: repeat(var(--bento-rows, 2), auto); /* 2 lignes par défaut */
-        gap: 5px; /* Espacement entre les cases */
-        width: 100%; /* La grille prend toute la largeur disponible */
-    }
     
-    /* Styles pour les articles de la grille */
-    .bentoImg {
-        position: relative;
-        overflow: hidden; /* Coupe les parties de l'image qui dépassent */
-        width: 100%; /* L'article prend toute la largeur de la case */
-        height: 100%; /* L'article prend toute la hauteur de la case */
-    }
-    
-    /* Styles pour les images */
-    .bentoImg figure img {
-        width: 100%; /* L'image prend toute la largeur de la case */
-        height: auto; /* L'image prend toute la hauteur de la case */
-        object-fit: cover; /* Remplit la case tout en conservant les proportions */
-        object-position: center; /* Centre l'image dans la case */
-        display: block; /* Supprime les espaces blancs autour de l'image */
-        border-radius: 10px; /* Facultatif : coins arrondis */
-    }
-    
-    /* Configuration spécifique pour les moodboards */
-    .moodboards > :nth-child(1) {
-        grid-column: span 3; /* L'élément occupe 3 colonnes */
-    }
-    
-    .moodboards > :nth-child(2) {
-        grid-column: span 2; /* L'élément occupe 2 colonnes */
-        grid-row: span 2; /* L'élément occupe 2 lignes */
-    }
-    
-    .moodboards > :last-child {
-        grid-column: span 2; /* L'élément occupe 2 colonnes */
-    }
-
-    .mockups > :nth-child(1) { 
-        grid-row: span 2; /* L'élément occupe 2 colonnes */
-    }
-    .mockups > :nth-child(2) { 
-        grid-row: span 2; /* L'élément occupe 2 colonnes */
-    }
-    .mockups > :nth-child(3) { 
-        grid-row: span 2; /* L'élément occupe 2 colonnes */
-    }
-    .mockups > :nth-child(4) { 
-        grid-row: span 2; /* L'élément occupe 2 colonnes */
-    }
-    .logos > :nth-child(2) { 
-        grid-column: span 2; /* L'élément occupe 2 colonnes */
-        grid-row: span 2; /* L'élément occupe 2 colonnes */
-    }
-    .conception > :nth-child(1) { 
-        grid-column: span 2; /* L'élément occupe 2 colonnes */
-        grid-row: span 2; /* L'élément occupe 2 colonnes */
-    }
-    .conception > :nth-child(5) { 
-        grid-column: span 2; /* L'élément occupe 2 colonnes */
-        grid-row: span 2; /* L'élément occupe 2 colonnes */
-    }
-    .chara > :nth-child(1) { 
-        grid-column: span 2; /* L'élément occupe 2 colonnes */
-        grid-row: span 2; /* L'élément occupe 2 colonnes */
-    }
-    .chara > :last-child { 
-        grid-column: span 3; /* L'élément occupe 2 colonnes */
-        grid-row: span 2; /* L'élément occupe 2 colonnes */
-    }
-    .illus > :nth-child(1) { 
-        grid-column: span 2; /* L'élément occupe 2 colonnes */
-        grid-row: span 2; /* L'élément occupe 2 colonnes */
-    }
-    .illus > :nth-child(4) { 
-        grid-column: span 3; /* L'élément occupe 2 colonnes */
-    }
-    .illus > :nth-child(5) { 
-        grid-column: span 2; /* L'élément occupe 2 colonnes */
-    }
-    .illus > :nth-last-child(2) { 
-        grid-column: span 2; /* L'élément occupe 2 colonnes */
-        grid-row: span 2; 
-    }
 
 
 }
