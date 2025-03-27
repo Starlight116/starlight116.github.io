@@ -16,11 +16,5 @@
     "image":"images/Meduse.png",
     "lien":"#",
     "tags":["Scénographie","Conception","Illustration","UX","Miniatures","3D"]
-    },
-    {"nom":"1finity",
-    "description":"Une histoire de famille racontée par des jeux perdus",
-    "image":"images/Bun.png",
-    "lien":"#",
-    "tags":["Developpement","Conception","Game Design","UI","Narrative Design"]
     }
 ]
