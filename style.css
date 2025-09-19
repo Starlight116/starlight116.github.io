@@ -502,7 +502,7 @@ article img:hover {
 }
 
 .bento {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(var(--bento-cols, 3), 1fr); /* 3 colonnes par défaut */
     grid-template-rows: repeat(var(--bento-rows, 2), auto); /* 2 lignes par défaut */
     gap: 5px; /* Espacement entre les cases */
@@ -1168,5 +1168,19 @@ button:hover {
         align-items: center;
         gap: 20px;
     }
+    .collapsible {
+        background-color: var(--secondary);
+        color: var(--accent);
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        outline: none;
+        display: flex;
+        align-items: center;
+      }
+      .active, .collapsible:hover {
+        background-color: var(--accent);
+        color: var(--secondary);
+      }
 }
 
