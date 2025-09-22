@@ -604,6 +604,32 @@ article img:hover {
     flex-wrap: wrap; /* Permettre aux éléments de passer à la ligne si l'espace est insuffisant */
 }
 
+.collapsible {
+    background-color: var(--secondary);
+    color: var(--accent);
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+.active, .collapsible:hover {
+background-color: var(--accent);
+color: var(--secondary);
+}
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
 /* Media query pour les écrans plus larges */
 @media (min-width: 768px) {
     .etiquette {
@@ -1171,20 +1197,5 @@ button:hover {
         align-items: center;
         gap: 20px;
     }
-    .collapsible {
-        background-color: var(--secondary);
-        color: var(--accent);
-        cursor: pointer;
-        width: 100%;
-        border: none;
-        outline: none;
-        display: flex;
-        align-items: center;
-        padding: 50px;
-      }
-      .active, .collapsible:hover {
-        background-color: var(--accent);
-        color: var(--secondary);
-      }
 }
 
