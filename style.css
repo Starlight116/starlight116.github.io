@@ -503,6 +503,9 @@ article img:hover {
 
 .bento {
     display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
     grid-template-columns: repeat(var(--bento-cols, 3), 1fr); /* 3 colonnes par défaut */
     grid-template-rows: repeat(var(--bento-rows, 2), auto); /* 2 lignes par défaut */
     gap: 5px; /* Espacement entre les cases */
@@ -1177,6 +1180,7 @@ button:hover {
         outline: none;
         display: flex;
         align-items: center;
+        padding: 50px;
       }
       .active, .collapsible:hover {
         background-color: var(--accent);
