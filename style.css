@@ -390,6 +390,7 @@ footer a{
 
 .contact-btn{
     border-radius: 10px;
+    font-family: "Space Grotesk", sans-serif;
     background:var(--text);
     color: var(--secondary);
     display: flex;
@@ -937,7 +938,7 @@ button:hover {
         line-height: 18px; /* 100% */
     }
     .footer-bunny{
-        color: var(--primary);
+        color: var(--background);
         font-family: "Segoe UI";
         font-size: 32px;
         font-style: normal;
