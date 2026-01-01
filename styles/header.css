@@ -1,0 +1,98 @@
+.siteheader{
+    background: var(--glassmenubar);
+    backdrop-filter: var(--glassblur);
+    -webkit-backdrop-filter: var(--glassblur);
+    box-shadow: var(--glassshadow);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    height: 96px;
+}
+.logo {
+    height: 85px;
+}
+
+.logo-svg {
+    height: 100%;
+    width: auto;
+    fill: var(--menutext);
+    display: block;
+}
+.logo a,
+.logo a:visited,
+.logo a:active,
+.logo a:focus {
+    color: var(--menutext);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: flex-end;
+    gap: 24px;
+    height: 100%;
+}
+.navlinks{
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    padding: 0 22px;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+.navlinks a {
+    display: flex;
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    text-decoration: none;
+}
+.navlinks a span{
+    text-align: center;
+    color: var(--menutext);
+    /* titles/h2 */
+    font-family: "Syne";
+    font-size: 28px;
+}
+.navlinks a:hover{
+    background-color: var(--menutext);
+}
+.navlinks a:hover span{
+    color: var(--menuhovertext);
+}
+nav .cv{
+    background-color: var(--btnbg);
+    color: var(--btntext);
+    border-radius: 24px;
+    box-shadow: var(--glasseffectbtn);
+    display: flex;
+    padding: 20px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    font-family: "Syne";
+    font-size: 28px;
+    
+    /*remove button default styles*/
+    border: none;
+}
+
+nav .cv:hover{
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    transition: all 0.2s ease-in-out;
+}
+
+nav .cv:active{
+    transform: translateY(2px);
+    box-shadow: none;
+    transition: all 0.1s ease-in-out;
+}

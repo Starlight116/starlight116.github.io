@@ -1,0 +1,38 @@
+.site-footer{
+    display: flex;
+    flex-direction: row;
+    margin: 0 10%;
+    height: 158px;
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+}
+.footer-content{
+    display: flex;
+    padding: 15px;
+    margin: 52px 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+    flex: 1 0 0;
+    color: var(--accenttext);
+    text-align: center;
+    font-family: "Space Grotesk";
+    font-size: 18px;
+    font-weight: 700;
+}
+.footer-content a, .footer-content a:visited, .footer-content a:active, .footer-content a:focus{
+    color: var(--bgaccent);
+}
+.footer-content p{
+    margin: 0;
+}
+.bnuy{
+    font-family: "Segoe UI";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 125% */
+    letter-spacing: -2.24px;
+    color: var(--bgaccent);
+}

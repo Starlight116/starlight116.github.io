@@ -1,0 +1,210 @@
+.projets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--beige);
+    color: var(--text);
+    padding: 140px 10px 10px;
+    gap: 64px;
+    width: auto;
+}
+
+.projets-title {
+    font-family: "Syne";
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -2px;
+    text-align: center;
+    color: var(--titles);
+    margin: 0;
+    white-space: nowrap;
+}
+
+.projets-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px 40px;
+    align-items: flex-start;
+    justify-content: center;
+    width: 1050px;
+    max-width: calc(100vw - 20px);
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    width: 505px;
+    background-color: var(--beige);
+    border: 12px solid var(--titles);
+    border-radius: 24px 24px 0 0;
+    overflow: hidden;
+    height: 674px;
+}
+
+.project-header {
+    background-color: var(--titles);
+    padding: 16px 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px 24px 0 0;
+    margin: -12px -12px 0 -12px;
+}
+
+.project-title {
+    font-family: "Syne";
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -2.88px;
+    color: var(--beige);
+    text-align: center;
+    margin: 0;
+    flex: 1;
+}
+
+.project-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    flex: 1;
+    width: 401px;
+    margin: 0 auto;
+}
+
+.project-description {
+    font-family: "Space Grotesk";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 100%;
+    text-align: center;
+    color: var(--titles);
+    margin: 0;
+    width: 100%;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 5px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.tag {
+    background-color: var(--orange);
+    color: var(--dark);
+    font-family: "Space Grotesk";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 100%;
+    padding: 10px;
+    border-radius: 24px;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.project-footer {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px 0;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.project-button {
+    background-color: var(--pink);
+    color: var(--beige);
+    font-family: "Syne Mono";
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -1.6px;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    margin: 0 auto;
+    width: 328px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.project-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(160, 48, 95, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1150px) {
+    .projets-grid {
+        width: 100%;
+        gap: 60px 30px;
+    }
+
+    .project-card {
+        width: calc(50% - 15px);
+        max-width: 505px;
+        height: auto;
+        min-height: 674px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projets {
+        padding: 100px 10px 10px;
+        gap: 50px;
+    }
+
+    .projets-title {
+        font-size: 32px;
+        letter-spacing: -1.6px;
+    }
+
+    .projets-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 505px;
+        height: auto;
+        min-height: 674px;
+    }
+
+    .project-title {
+        font-size: 28px;
+        letter-spacing: -2.24px;
+    }
+
+    .project-button {
+        width: 100%;
+        max-width: 328px;
+    }
+}

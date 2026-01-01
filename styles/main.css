@@ -1,0 +1,82 @@
+:root{
+    --beige: #DFD9B9;
+    --beige80: #dfd9b980;
+    --blue: #2C1E74;
+    --blue80: #2c1e7480;
+    --dark: #050E3C;
+    --light: #FCE5CF;
+    --pink: #A0305F;
+    --pink95: #a0305f95;
+    --orange: #D58863;
+    --orange95: #d5886395;
+    --bg-image: url('../images/background.gif');
+    --glasseffectbtn: -4px -4px 10px 0 rgba(255, 255, 255, 0.22) inset, 4px 4px 10px 0 rgba(255, 255, 255, 0.22) inset;
+    --glassshadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    --glassblur: blur(3.1px);
+    cursor:url('../icons/Bunny.cur'), auto;
+}
+body{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    background-image: var(--bg-image);
+}
+header, footer, main, nav, section, article, aside{
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+/*header must stay on top*/
+header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+/*content is under header*/
+main{
+    z-index: 1;
+    position: relative;
+    margin-top: -96px;
+    margin-right: 10%;
+    margin-left: 10%;
+    width:auto;
+}
+
+a, a:visited,a:active,a:focus{
+    text-decoration: none;
+}
+
+/* light mode */
+@media (prefers-color-scheme: light){
+    :root{
+        --glassmenubar:var(--blue80);
+        --menutext:var(--beige);
+        --menuhovertext:var(--blue);
+        --btnbg:var(--pink95);
+        --btntext:var(--light);
+        --bgpage:var(--beige);
+        --bgaccent:var(--orange);
+        --text:var(--dark);
+        --titles:var(--blue);
+        --accenttext:var(--pink);
+        --gradient:radial-gradient(50% 50% at 50% 50%, var(--blue) 0%, var(--dark) 100%);
+    }
+}
+/* dark mode */
+@media (prefers-color-scheme: dark){
+    :root{
+        --glassmenubar:var(--beige80);
+        --menutext:var(--blue);
+        --menuhovertext:var(--beige);
+        --btnbg:var(--orange95);
+        --btntext:var(--dark);
+        --bgpage:var(--blue);
+        --bgaccent:var(--pink);
+        --text:var(--light);
+        --titles:var(--beige);
+        --accenttext:var(--orange);
+        --gradient:radial-gradient(50% 50% at 50% 50%, var(--beige) 0%, var(--light) 100%);
+    }
+}

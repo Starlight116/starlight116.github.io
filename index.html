@@ -1,84 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8" />
-    <title>Site en rénovation</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/footer.css">
+    </head>
+    <body>
+        <header id="header"></header>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <main id="content"></main>
 
-    <style>
-        :root {
-            --pearl-beige: #dad3af;
-            --toasted-almond: #d58863;
-            --hot-berry: #c23a73;
-            --midnight-blue: #2c1e74;
-            --deep-navy: #050e3c;
-        }
+        <footer id="footer"></footer>
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        <script src="scripts/app.js"></script>
+    </body>
 
-        body {
-            min-height: 100vh;
-            background: linear-gradient(
-        135deg,
-        var(--deep-navy),
-        var(--midnight-blue)
-    );
-            color: var(--pearl-beige);
-            font-family: "Space Grotesk", sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 700px;
-            padding: 2rem;
-        }
-
-        h1 {
-            font-family: "Syne Mono", monospace;
-            font-size: 2.5rem;
-            color: var(--hot-berry);
-            margin-bottom: 1rem;
-        }
-
-        p {
-            font-size: 1.2rem;
-            color: var(--toasted-almond);
-            margin-bottom: 3rem;
-        }
-
-        .hidden-bunny {
-            text-align: center;
-            font-family: "Segoe UI";
-            font-size: 48px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 50px; /* 104.167% */
-            letter-spacing: -4.8px;
-            color: var(--pearl-beige);
-        }
-    </style>
-</head>
-
-<body>
-    <div class="container">
-        <h1>Site en rénovation</h1>
-        <p>Je fais quelques travaux ici ! <br/>Revenez bientôt</p>
-
-        <div class="hidden-bunny">
-            (\&nbsp;&nbsp;/)<br/>
-            (&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;)
-        </div>
-    </div>
-</body>
 </html>

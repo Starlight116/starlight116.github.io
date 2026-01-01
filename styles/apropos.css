@@ -1,0 +1,294 @@
+.apropos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: var(--text);
+}
+
+/* Section titles */
+.section-title {
+    font-family: "Syne";
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -2.88px;
+    text-align: center;
+    color: var(--titles);
+    margin: 0;
+}
+
+/* Mes valeurs section */
+.valeurs-section {
+    background-color: var(--beige);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 50px 0;
+    min-height: 389px;
+}
+
+.valeurs-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.value-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+    height: 124px;
+}
+
+.value-label {
+    font-family: "Space Grotesk";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    text-align: center;
+    color: var(--titles);
+    margin: 0;
+    width: 100%;
+}
+
+.value-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.value-icon img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Compétences section */
+.competences-section {
+    background-color: var(--orange);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    min-height: 705px;
+}
+
+.competences-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px 40px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.competence-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 136px;
+    gap: 10px;
+    overflow: clip;
+}
+
+.competence-label {
+    font-family: "Space Grotesk";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 100%;
+    text-align: center;
+    color: var(--titles);
+    margin: 0;
+}
+
+.competence-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.competence-icon img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Adjust height for specific items */
+.competence-item:has(.competence-label:contains("Tests utilisateurs")),
+.competence-item:has(.competence-label:contains("Conception de bases de données")),
+.competence-item:has(.competence-label:contains("Graphisme et communication")) {
+    height: 160px;
+}
+
+/* Logiciels section */
+.logiciels-section {
+    background-color: var(--beige);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    min-height: 558px;
+}
+
+.logiciels-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 59px 40px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 613px;
+}
+
+.logiciel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    overflow: clip;
+}
+
+.logiciel-label {
+    font-family: "Space Grotesk";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+    color: var(--titles);
+    margin: 0;
+}
+
+.logiciel-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.logiciel-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Langages section */
+.langages-section {
+    background-color: var(--orange);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    min-height: 537px;
+}
+
+.langages-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 59px 40px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 625px;
+}
+
+.langage-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    overflow: clip;
+}
+
+.langage-label {
+    font-family: "Space Grotesk";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+    color: var(--titles);
+    margin: 0;
+}
+
+.langage-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.langage-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 28px;
+        letter-spacing: -2.24px;
+    }
+
+    .value-item {
+        width: 80px;
+        height: 100px;
+    }
+
+    .value-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .competence-item {
+        width: 150px;
+        height: 120px;
+    }
+
+    .competence-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .logiciel-item {
+        width: 100px;
+    }
+
+    .logiciel-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .langage-item {
+        width: 100px;
+    }
+
+    .langage-icon {
+        width: 80px;
+        height: 80px;
+    }
+}
