@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--beige);
+    background-color: var(--bgpage);
     color: var(--text);
     padding: 140px 10px 10px;
     gap: 64px;
@@ -27,7 +27,6 @@
     gap: 80px 40px;
     align-items: flex-start;
     justify-content: center;
-    width: 1050px;
     max-width: calc(100vw - 20px);
 }
 
@@ -35,7 +34,7 @@
     display: flex;
     flex-direction: column;
     width: 505px;
-    background-color: var(--beige);
+    background-color: var(--bgaccent);
     border: 12px solid var(--titles);
     border-radius: 24px 24px 0 0;
     overflow: hidden;
@@ -59,8 +58,8 @@
     font-weight: 400;
     line-height: 100%;
     letter-spacing: -2.88px;
-    color: var(--beige);
-    text-align: center;
+    color: var(--bgpage);
+    text-align: left;
     margin: 0;
     flex: 1;
 }
@@ -111,8 +110,8 @@
 }
 
 .tag {
-    background-color: var(--orange);
-    color: var(--dark);
+    background-color: var(--bgpage);
+    color: var(--text);
     font-family: "Space Grotesk";
     font-size: 18px;
     font-weight: 400;
@@ -132,9 +131,10 @@
 }
 
 .project-button {
-    background-color: var(--pink);
-    color: var(--beige);
-    font-family: "Syne Mono";
+    background-color: var(--btnbg);
+    color: var(--btntext);
+    box-shadow: var(--glasseffectbtn);
+    font-family: "Syne";
     font-size: 32px;
     font-weight: 400;
     line-height: 100%;
@@ -153,58 +153,16 @@
     white-space: nowrap;
     transition: all 0.3s ease;
 }
-
-.project-button:hover {
-    opacity: 0.9;
+.project-button:hover{
+    filter: brightness(1.1);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(160, 48, 95, 0.3);
+    transition: all 0.2s ease-in-out;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1150px) {
-    .projets-grid {
-        width: 100%;
-        gap: 60px 30px;
-    }
-
-    .project-card {
-        width: calc(50% - 15px);
-        max-width: 505px;
-        height: auto;
-        min-height: 674px;
-    }
+.project-button:active{
+    transform: translateY(2px);
+    box-shadow: none;
+    transition: all 0.1s ease-in-out;
 }
 
-@media (max-width: 768px) {
-    .projets {
-        padding: 100px 10px 10px;
-        gap: 50px;
-    }
 
-    .projets-title {
-        font-size: 32px;
-        letter-spacing: -1.6px;
-    }
-
-    .projets-grid {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .project-card {
-        width: 100%;
-        max-width: 505px;
-        height: auto;
-        min-height: 674px;
-    }
-
-    .project-title {
-        font-size: 28px;
-        letter-spacing: -2.24px;
-    }
-
-    .project-button {
-        width: 100%;
-        max-width: 328px;
-    }
-}

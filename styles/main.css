@@ -47,6 +47,136 @@ main{
 a, a:visited,a:active,a:focus{
     text-decoration: none;
 }
+.overlay {
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(20, 10, 40, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s steps(4);
+}
+.overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal {
+    width: 90vw;
+    max-width: 1500px;
+    max-height: 90vh;
+    border-radius: 24px 24px 0 0;
+    border: 12px solid var(--titles);
+    overflow: hidden;
+    transform: scale(0.85) translateY(40px);
+    
+    position: relative;
+    z-index: 1001;
+
+    transition:
+        transform 0.45s cubic-bezier(0.25, 1.4, 0.5, 1),
+        opacity 0.3s steps(3);
+}
+
+.overlay.active .modal {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+.modal::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.03),
+        rgba(255,255,255,0.03) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    pointer-events: none;
+}
+
+.close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: var(--btnbg);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    font-size: 24px;
+    color: var(--btntext);
+    cursor: pointer;
+    box-shadow: var(--glasseffectbtn);
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.close:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    transition: all 0.2s ease-in-out;
+}
+.close:active {
+    transform: translateY(2px);
+    box-shadow: none;
+    transition: all 0.1s ease-in-out;
+}
+body.modal-open {
+  overflow: hidden;
+}
+.modal-content {
+    padding: 60px 40px 40px;
+    overflow-y: auto;
+    height: 90vh;
+    color: var(--text);
+    background-color: var(--bgaccent);
+    font-family: "Space Grotesk";
+    font-size: 18px;
+    line-height: 1.6;
+}
+.modal-header {
+    background-color: var(--titles);
+    display: flex;
+    height: 70px;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-title {
+    font-family: "Syne";
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -2.88px;
+    color: var(--bgpage);
+    margin: 0;
+}
+
+.back-to-top {
+    display: flex;
+    width: 75px;
+    height: 75px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 50%;
+    background: var(--btnbg);
+    position: fixed;
+    bottom: 10%;
+    right: 7%;
+    cursor: pointer;
+    box-shadow: var(--glasseffectbtn);
+    z-index: 50;
+    content: var(--top);
+}
 
 /* light mode */
 @media (prefers-color-scheme: light){
