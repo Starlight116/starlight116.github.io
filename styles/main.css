@@ -6,14 +6,15 @@
     --dark: #050E3C;
     --light: #FCE5CF;
     --pink: #A0305F;
-    --pink95: #a0305f95;
+    --pink95: #a0305fe3;
     --orange: #D58863;
-    --orange95: #d5886395;
+    --orange95: #d58763e3;
     --bg-image: url('../images/background.gif');
     --glasseffectbtn: -4px -4px 10px 0 rgba(255, 255, 255, 0.22) inset, 4px 4px 10px 0 rgba(255, 255, 255, 0.22) inset;
     --glassshadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     --glassblur: blur(3.1px);
     cursor:url('../icons/Bunny.cur'), auto;
+
 }
 body{
     padding: 0;
@@ -62,6 +63,12 @@ a, a:visited,a:active,a:focus{
         --titles:var(--blue);
         --accenttext:var(--pink);
         --gradient:radial-gradient(50% 50% at 50% 50%, var(--blue) 0%, var(--dark) 100%);
+		--imghome: url('../images/logo-light.png');
+		--git: url('../images/git-light.png');
+		--itch: url('../images/itch-light.png');
+		--artstation: url('../images/art-light.png');
+		--linkedin: url('../images/in-light.png');
+		--lieu: url('../images/lieu-light.png');
     }
 }
 /* dark mode */
@@ -78,5 +85,11 @@ a, a:visited,a:active,a:focus{
         --titles:var(--beige);
         --accenttext:var(--orange);
         --gradient:radial-gradient(50% 50% at 50% 50%, var(--beige) 0%, var(--light) 100%);
+		--imghome: url('../images/logo-dark.png');
+		--git: url('../images/git-dark.png');
+		--itch: url('../images/itch-dark.png');
+		--artstation: url('../images/art-dark.png');
+		--linkedin: url('../images/in-dark.png');
+		--lieu: url('../images/lieu-dark.png');
     }
 }
