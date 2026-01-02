@@ -19,14 +19,13 @@
 body{
     padding: 0;
     margin: 0;
-    width: 100vw;
     background-image: var(--bg-image);
+	width: 100%;
 }
 header, footer, main, nav, section, article, aside{
     display: block;
     margin: 0;
     padding: 0;
-    width: 100vw;
 }
 
 /*header must stay on top*/
@@ -42,7 +41,7 @@ main{
     margin-top: -96px;
     margin-right: 10%;
     margin-left: 10%;
-    width:auto;
+	
 }
 
 a, a:visited,a:active,a:focus{
@@ -64,11 +63,13 @@ a, a:visited,a:active,a:focus{
         --accenttext:var(--pink);
         --gradient:radial-gradient(50% 50% at 50% 50%, var(--blue) 0%, var(--dark) 100%);
 		--imghome: url('../images/logo-light.png');
-		--git: url('../images/git-light.png');
-		--itch: url('../images/itch-light.png');
-		--artstation: url('../images/art-light.png');
-		--linkedin: url('../images/in-light.png');
-		--lieu: url('../images/lieu-light.png');
+		--git: url('../icons/git-light.png');
+		--itch: url('../icons/itch-light.png');
+		--artstation: url('../icons/art-light.png');
+		--linkedin: url('../icons/in-light.png');
+		--lieu: url('../icons/lieu-light.png');
+        /*filter on images to adapt to light*/
+        --filter: brightness(0.8) contrast(1.4);
     }
 }
 /* dark mode */
@@ -86,10 +87,11 @@ a, a:visited,a:active,a:focus{
         --accenttext:var(--orange);
         --gradient:radial-gradient(50% 50% at 50% 50%, var(--beige) 0%, var(--light) 100%);
 		--imghome: url('../images/logo-dark.png');
-		--git: url('../images/git-dark.png');
-		--itch: url('../images/itch-dark.png');
-		--artstation: url('../images/art-dark.png');
-		--linkedin: url('../images/in-dark.png');
-		--lieu: url('../images/lieu-dark.png');
+		--git: url('../icons/git-dark.png');
+		--itch: url('../icons/itch-dark.png');
+		--artstation: url('../icons/art-dark.png');
+		--linkedin: url('../icons/in-dark.png');
+		--lieu: url('../icons/lieu-dark.png');
+        
     }
 }
