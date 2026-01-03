@@ -1,19 +1,20 @@
 .home{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 3% 30px 20px 30px;
+    padding: 10% 30px 20px 30px;
     background-color: var(--bgpage);
     color:var(--text);
-    width: auto;
+    width: 100%;
     top:0;
     gap: 60px;
 }
 .homecontentcontainer{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-shrink: 0;
     align-self: stretch;
@@ -22,16 +23,15 @@
 .hometext{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap:30px;
-    width:50%;
 }
 .homedetails{
     display: flex;
     padding: 30px 0;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 36px;
 }
@@ -59,6 +59,7 @@
 }
 .hometitre h1{
     margin: 0;
+    padding: 0;
     font-family: "Syne";
     font-size: 96px;
     font-style: normal;
@@ -71,6 +72,7 @@
 }
 .hometitre h2{
     margin: 0;
+    padding: 0;
     font-family: "Syne";
     font-size: 40px;
     font-style: normal;

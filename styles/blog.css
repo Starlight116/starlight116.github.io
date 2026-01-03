@@ -21,22 +21,21 @@
 .blog-mascot {
     text-align: center;
     font-family: "Segoe UI";
-    font-size: 96px;
+    font-size: 80px;
     font-style: normal;
     font-weight: 700;
-    line-height: 110px; /* 114.583% */
-    letter-spacing: -6.72px;
+    letter-spacing: -7.72px;
     color: var(--titles);
 }
 
 .blog-mascot p {
     margin: 0;
     padding: 0;
-    line-height: 110px;
+    line-height: 90px;
 }
 
 .blog-title {
-    font-family: "Syne Mono";
+    font-family: "Syne";
     font-size: 64px;
     font-weight: 400;
     line-height: 100%;

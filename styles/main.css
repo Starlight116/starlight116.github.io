@@ -46,6 +46,7 @@ main{
 
 a, a:visited,a:active,a:focus{
     text-decoration: none;
+    color: inherit;
 }
 .overlay {
     position: fixed;
@@ -142,6 +143,12 @@ body.modal-open {
     font-size: 18px;
     line-height: 1.6;
 }
+/*links in modal content execpt support button*/
+.modal-content a:not(.support, .project-info-item a) {
+    color: var(--text);
+    text-decoration: underline;
+}
+
 .modal-header {
     background-color: var(--titles);
     display: flex;
@@ -160,12 +167,6 @@ body.modal-open {
     margin: 0;
 }
 
-.modal-content img{
-    max-width: 80%;
-    height: auto;
-    margin: 20px 0;
-    border-radius: 16px;
-}
 .modal-content button{
     background-color: var(--btnbg);
     color: var(--btntext);
@@ -215,6 +216,32 @@ body.modal-open {
     gap: 15px;
     margin-bottom: 30px;
 }
+.project-head-image {
+    width: calc(100% + 80px);
+    height: 260px;
+    margin:-40px 0px 20px -40px;
+    object-fit: cover;
+    /*move img down a bit*/
+    object-position: center 20%;
+}
+.project-image {
+    max-width: 400px;
+    margin: 20px 0;
+}
+.project-image img {
+    width: 100%;
+    height: auto;
+}
+
+.project-image-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 
 .project-info-item {
     display: flex;
@@ -232,8 +259,8 @@ body.modal-open {
     line-height: 1;
 }
 .project-info-item a {
-    color: var(--bgaccent);
-    text-decoration: none;
+    color: var(--textaccent);
+    text-decoration: underline;
 }
 
 .project-group-label {
@@ -290,12 +317,13 @@ body.modal-open {
 
 .back-to-top {
     display: flex;
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
     display: none;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    content: var(--arrow);
+    padding: 20px;
     border-radius: 50%;
     background: var(--btnbg);
     position: fixed;
@@ -304,7 +332,7 @@ body.modal-open {
     cursor: pointer;
     box-shadow: var(--glasseffectbtn);
     z-index: 50;
-    content: var(--top);
+    
 }
 
 /* light mode */
@@ -327,6 +355,7 @@ body.modal-open {
 		--artstation: url('../icons/art-light.png');
 		--linkedin: url('../icons/in-light.png');
 		--lieu: url('../icons/lieu-light.png');
+        --arrow: url('../icons/arrow-light.png');
         /*filter on images to adapt to light*/
         --filter: brightness(0.8) contrast(1.4);
     }
@@ -351,6 +380,6 @@ body.modal-open {
 		--artstation: url('../icons/art-dark.png');
 		--linkedin: url('../icons/in-dark.png');
 		--lieu: url('../icons/lieu-dark.png');
-        
+        --arrow: url('../icons/arrow-dark.png');
     }
 }
