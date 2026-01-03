@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--beige);
+    background-color: var(--bgpage);
     color: var(--text);
     padding: 110px 50px 15px;
     gap: 25px;
@@ -19,15 +19,14 @@
 }
 
 .blog-mascot {
-    font-family: "Segoe UI", "Noto Sans", sans-serif;
+    text-align: center;
+    font-family: "Segoe UI";
     font-size: 96px;
+    font-style: normal;
     font-weight: 700;
-    line-height: 110px;
+    line-height: 110px; /* 114.583% */
     letter-spacing: -6.72px;
     color: var(--titles);
-    margin: 0;
-    white-space: pre-wrap;
-    text-align: center;
 }
 
 .blog-mascot p {
@@ -70,7 +69,7 @@
 
 .blog-date-card {
     background-color: var(--titles);
-    color: var(--beige);
+    color: var(--bgpage);
     font-family: "Syne Mono";
     font-size: 40px;
     font-weight: 400;
@@ -151,49 +150,5 @@
         width: 200px;
         height: 70px;
         padding: 8px 16px;
-    }
-}
-
-@media (max-width: 768px) {
-    .blog {
-        padding: 80px 20px 15px;
-        gap: 20px;
-    }
-
-    .blog-header {
-        width: 100%;
-        gap: 20px;
-    }
-
-    .blog-articles {
-        width: 100%;
-        height: auto;
-        gap: 10px;
-    }
-
-    .blog-row {
-        flex-wrap: wrap;
-        height: auto;
-        padding-right: 0;
-        gap: 10px;
-    }
-
-    .blog-mascot {
-        font-size: 48px;
-        line-height: 60px;
-        letter-spacing: -3px;
-    }
-
-    .blog-title {
-        font-size: 32px;
-        letter-spacing: -1.6px;
-    }
-
-    .blog-date-card {
-        font-size: 18px;
-        width: 140px;
-        height: 60px;
-        padding: 6px 12px;
-        margin-right: -5px;
     }
 }
