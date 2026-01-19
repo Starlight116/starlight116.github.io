@@ -6,6 +6,65 @@
     background-color: var(--bgpage);
 }
 
+.homecontent{
+    padding: 0 40px;
+    color:var(--text);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+    flex-shrink: 0;
+    align-self: stretch;
+    padding-top:25px;
+}
+.highlight{
+    color: var(--accenttext);
+    transition: opacity 0.2s ease-in-out;
+}
+.hometitre{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    padding-top: 25px;
+}
+.hometitre h1{
+    margin: 0;
+    padding: 0;
+    font-family: "Syne";
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 96px */
+    letter-spacing: -4.8px;
+    color: var(--titles);
+    text-align: center;
+    width:100%;
+}
+.hometitre h2{
+    margin: 0;
+    padding: 0;
+    font-family: "Syne";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 40px */
+    letter-spacing: -2px;
+    text-align: center;
+    color: var(--titles);
+    width:100%;
+}
+.homecontent p{
+    margin: 0;
+    font-family: "Space Grotesk";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px; /* 140% */
+    text-align: center;
+    
+}
 /* Section titles */
 .section-title {
     font-family: "Syne";

@@ -13,12 +13,12 @@
 }
 .homecontentcontainer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
     align-self: stretch;
-
+    gap: 40px;
 }
 .hometext{
     display: flex;
@@ -54,8 +54,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     flex-shrink: 0;
+    padding-top: 25px;
 }
 .hometitre h1{
     margin: 0;
@@ -67,7 +68,7 @@
     line-height: 100%; /* 96px */
     letter-spacing: -4.8px;
     color: var(--titles);
-    text-align: left;
+    text-align: center;
     width:100%;
 }
 .hometitre h2{
@@ -79,32 +80,24 @@
     font-weight: 400;
     line-height: 100%; /* 40px */
     letter-spacing: -2px;
-    text-align: left;
+    text-align: center;
     color: var(--titles);
     width:100%;
 }
 .highlight{
     color: var(--accenttext);
+    transition: opacity 0.2s ease-in-out;
 }
-.homecontent{
-    padding: 0 40px;
-    color:var(--text);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 34px;
-    flex-shrink: 0;
-    align-self: stretch;
+
+.highlight::after {
+  content: "▍";
+  margin-left: 2px;
+  animation: blink 1s infinite;
 }
-.homecontent p{
-    margin: 0;
-    font-family: "Space Grotesk";
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 28px; /* 140% */
-    text-align: center;
-    
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
 }
 
 .btnprojets{
@@ -125,6 +118,7 @@
     border: none;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    margin-bottom: 40px;
 }
 
 .btnprojets:hover{

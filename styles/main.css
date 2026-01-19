@@ -221,8 +221,6 @@ body.modal-open {
     height: 260px;
     margin:-40px 0px 20px -40px;
     object-fit: cover;
-    /*move img down a bit*/
-    object-position: center 20%;
 }
 .project-image {
     max-width: 400px;

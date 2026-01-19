@@ -28,6 +28,7 @@
     align-items: flex-start;
     justify-content: center;
     max-width: calc(100vw - 20px);
+    padding-bottom: 40px;
 }
 
 .project-card {
@@ -43,8 +44,7 @@
 
 .project-header {
     background-color: var(--titles);
-    padding: 16px 20px;
-    height: 80px;
+    padding: 20px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,19 +74,20 @@
 .project-card-image img {
     object-fit: cover;
     width: 100%;
-    object-position: center 20%;
+    height: 300px;
+    object-position: center center;
 }
 
 .project-content {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;
     align-items: center;
     justify-content: center;
-    padding: 20px 0;
     flex: 1;
-    width: 401px;
     margin: 0 auto;
+    margin-left:20px;
+    margin-right: 20px;
 }
 
 .project-description {
@@ -125,7 +126,7 @@
 .project-footer {
     display: flex;
     align-items: flex-start;
-    padding: 20px 0;
+    padding: 10px 0;
     width: 100%;
     justify-content: flex-start;
 }

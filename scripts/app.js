@@ -1,3 +1,4 @@
+
 async function loadPartial(id, file) {
   const res = await fetch(file);
   document.getElementById(id).innerHTML = await res.text();
@@ -20,13 +21,19 @@ async function loadPage(page) {
   await loadPartial("footer", "../pages/footer.html");
 
   const page = location.hash.replace("#", "") || "home";
-  loadPage(page);
+   await loadPage(page);
+  if (page === "home") {
+    animateHighlight();
+  }
 })();
 
 // Navigation
-window.addEventListener("hashchange", () => {
+window.addEventListener("hashchange", async () => {
   const page = location.hash.replace("#", "") || "home";
-  loadPage(page);
+   await loadPage(page);
+  if (page === "home") {
+    animateHighlight();
+  }
 });
 
 document.addEventListener("click", (e) => {
@@ -106,3 +113,74 @@ backToTopButton.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+let typewriterRunning = false;
+
+function animateHighlight() {
+  if (typewriterRunning) return;
+  typewriterRunning = true;
+
+  const words = [
+    "Web Designer",
+    "Integratrice Front-End",
+    "Creatrice de sites modernes",
+    "UX/UI Designer",
+    "Graphiste",
+    "Illustratrice",
+    "Character Designer",
+    "Scénographe",
+    "Directrice Artistique",
+    "3D Artist",
+    "Motion Designer",
+    "Camille"
+  ];
+
+  const el = document.getElementById("highlight");
+  if (!el) {
+    typewriterRunning = false;
+    return;
+  }
+
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  const typingSpeed = 80;
+  const deletingSpeed = 40;
+  const pauseAfterWord = 1200;
+  const pauseLastWord = 3500;
+
+  function type() {
+    if (!document.body.contains(el)) {
+      typewriterRunning = false;
+      return;
+    }
+
+    const currentWord = words[wordIndex];
+    const currentDelay =
+      wordIndex === words.length - 1 ? pauseLastWord : pauseAfterWord;
+
+    if (!isDeleting) {
+      el.textContent = currentWord.slice(0, charIndex + 1);
+      charIndex++;
+
+      if (charIndex === currentWord.length) {
+        setTimeout(() => (isDeleting = true), currentDelay);
+      }
+    } else {
+      el.textContent = currentWord.slice(0, charIndex - 1);
+      charIndex--;
+
+      if (charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+      }
+    }
+
+    setTimeout(
+      type,
+      isDeleting ? deletingSpeed : typingSpeed
+    );
+  }
+
+  type();
+}
